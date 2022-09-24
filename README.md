@@ -5,6 +5,12 @@
 [官方网址](https://vuepress.vuejs.org/zh/)
 
 ## 目录结构说明
+|url|相关内容|文件路径|
+|---|---|---|
+|/|默认路径|/docs/|
+|/k8s|k8s|/docs/k8s/|
+|/mysql|数据库|/docs/mysql/|
+|/tag|标签类型|/docs/tag/|
 
 运行yarn docs:dev之后，看到的html页面是docs下面经过渲染的README.md文件。
 
