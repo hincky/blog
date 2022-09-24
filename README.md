@@ -12,7 +12,7 @@
 |/mysql|数据库|/docs/mysql/|
 |/tag|标签类型|/docs/tag/|
 
-运行yarn docs:dev之后，看到的html页面是docs下面经过渲染的README.md文件。
+运行`yarn docs:dev`之后，看到的html页面是docs下面经过渲染的README.md文件。
 
 默认访问/，就是访问README.html，而README.html是由README.md渲染而来
 
@@ -24,6 +24,6 @@
 
 ## 配置
 
-配置文件是在docs文件夹下的.vuepress文件夹下的config.js
+配置文件是在docs文件夹下的`.vuepress`文件夹下的`config.js`
 
 对比着官网的配置，可以更换自己喜欢的配置
