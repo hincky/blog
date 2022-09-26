@@ -20,14 +20,15 @@
 我将之前运行的docker镜像打包上传了，里面已经有相应的组件和环境，图快图省事的可以直接拉取镜像到本地运行即可。缺点是镜像800+MB，不过docker pull的速度也还好，可以接受。
 
 ```
-docker pull hincky/vuepress  或者下面这个
-docker pull hincky/vuepress:latest
+docker pull hincky/vuepress 
 docker run -itd -p 2280:8080 --name=vuepress hincky/vuepress:latest
 docker exec -it vuepress /bin/bash
 
 cd
 cd vuepress
 
+yarn init                # npm init
+yarn add -D vuepress     # npm install -D vuepress
 yarn docs:dev            # npm run docs:dev
 ```
 
