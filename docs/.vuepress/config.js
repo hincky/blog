@@ -5,10 +5,12 @@ module.exports = {
   description: 'Hincky的个人技术博客，用于记录后端技术相关的文档、笔记。不定期更新，随缘更新，有缘关注。',
   base: '/',
   dest: '.vuepress/dist',  // 设置输出目录
-      head: [],
+      head: [
+        ['link', { rel: 'icon', href: '/assets/img/h-icon.jpg' }]
+      ],
       plugins: [],
       themeConfig: {
-          logo: '/assets/img/hincky-logo.png',
+          logo: '/assets/img/earth-logo.jpg',
           // 添加导航栏
           nav: [
   		{ text: '主页', link: '/' },
