@@ -8,7 +8,7 @@ module.exports = {
       head: [],
       plugins: [],
       themeConfig: {
-          logo: '/assets/img/logo.png',
+          logo: '/assets/img/hincky-logo.png',
           // 添加导航栏
           nav: [
   		{ text: '主页', link: '/' },
