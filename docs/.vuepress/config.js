@@ -13,7 +13,7 @@ module.exports = {
           logo: '/assets/img/earth-logo.jpg',
           // 添加导航栏
           nav: [
-  		{ text: '主页', link: '/' },
+  		{ text: '博客主页', link: '/' },
   		{ text: 'k8s', link: '/k8s/' },
         { text: 'mysql', link: '/mysql/' },
         { text: 'k8s', link: '/guide/' },
