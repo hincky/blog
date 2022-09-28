@@ -13,16 +13,24 @@ module.exports = {
           logo: '/assets/img/earth-logo.jpg',
           // 添加导航栏
           nav: [
-  		{ text: '博客主页', link: '/' },
-  		{ text: 'k8s', link: '/k8s/' },
-      { text: 'mysql', link: '/mysql/' },
-      { text: 'redis', link: '/redis/' },
-  		{ text: 'Spring相关',
-  	  	    items: [
-  			{ text: 'spring核心框架', link: '/spring/spring-framework/' },
-  			{ text: 'Spring Boot', link: '/spring/springboot/' }
-  		    ]
-  	        }
+          { text: '博客主页', link: '/' },
+          { text: 'k8s', link: '/k8s/' },
+          { text: 'mysql', link: '/mysql/' },
+          { text: 'redis', link: '/redis/' },
+          { text: 'Spring相关',
+              items: [
+              { text: 'spring核心框架', link: '/spring/spring-framework/' },
+              { text: 'Spring Boot', link: '/spring/springboot/' }
+              ]
+  	      },
+          { text: '小工具合集',
+              items: [
+              { text: 'linux命令', link: '/tools/linux-command/index.html' },
+              { text: 'docker命令', link: '/tools/docker-command/' },
+              { text: 'k8s命令', link: '/tools/k8s-command/' },
+              { text: 'git命令', link: '/tools/git-command/' }
+              ]
+  	      },
           ],
       sidebar: [],
       sidebarDepth: 2,
