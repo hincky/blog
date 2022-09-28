@@ -25,7 +25,7 @@ module.exports = {
   	      },
           { text: '小工具合集',
               items: [
-              { text: 'linux命令', link: '/tools/linux-command/index.html' },
+              { text: 'linux命令', link: '/tools/linux-command/' },
               { text: 'docker命令', link: '/tools/docker-command/' },
               { text: 'k8s命令', link: '/tools/k8s-command/' },
               { text: 'git命令', link: '/tools/git-command/' }
