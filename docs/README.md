@@ -4,7 +4,7 @@ home: true
 heroText: Hero 标题
 tagline: Hero 副标题
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /k8s/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
@@ -13,6 +13,19 @@ features:
 - title: 高性能
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 ---
+
+---
+> 本网站只是由丐版阿里云服务器驱动，经不起攻击哈，小伙伴们悠着点访问呗，谢谢啦~
+---
+
+### 公众号
+
+学习不走弯路，关注公众号「hincky」，看更多通俗易懂的知识！
+
+![img](./img/hincky-ERcode-28KB.jpg)
+
+
+
 
 
 
