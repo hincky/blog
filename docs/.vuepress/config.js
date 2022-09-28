@@ -16,7 +16,7 @@ module.exports = {
   		{ text: '博客主页', link: '/' },
   		{ text: 'k8s', link: '/k8s/' },
       { text: 'mysql', link: '/mysql/' },
-      { text: 'mysql', link: '/redis/' },
+      { text: 'redis', link: '/redis/' },
   		{ text: 'Spring相关',
   	  	    items: [
   			{ text: 'spring核心框架', link: '/spring/spring-framework/' },
