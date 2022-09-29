@@ -74,4 +74,20 @@ Host *github.com
 
 ## git加速
 
+![](img/git-access.jpg)
 
+1. 访问[这里](https://github.global.ssl.fastly.net.ipaddress.com/#ipinfo)，获取CDNip和域名
+eg: 140.82.114.4 http://github.com
+2. 再访问[这里](https://github.com.ipaddress.com/#ipinfo)，获取CDNip和域名
+eg: 140.82.114.4 http://github.com
+3. 管理员身份修改本地host文件，映射上面查找到的IP
+Windows：c:Windows-System32-drivers-etc-hosts
+在最后添加：
+```
+151.101.1.194		github.global.ssl.fastly.net
+151.101.65.194		github.global.ssl.fastly.net
+151.101.129.194		github.global.ssl.fastly.net
+151.101.193.194		github.global.ssl.fastly.net
+
+140.82.113.4 		github.com
+```
