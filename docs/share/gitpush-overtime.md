@@ -9,10 +9,11 @@
 > A:
 集思广益之后，总结出以下几种解决方案：
 
+参考方案与链接
+
 1. [macOS 给 Git(Github) 设置代理（HTTP/SSH）](https://gist.github.com/chuyik/02d0d37a49edc162546441092efae6a1)
 2. git加速
-3. 
-4. 
+3. [Git加速必经之路](https://blog.csdn.net/sinat_27672523/article/details/109014301)
 
 ## 给github设置http/ssh代理
 ### macOS
@@ -77,9 +78,9 @@ Host *github.com
 ![](img/git-access.jpg)
 
 1. 访问[这里](https://github.global.ssl.fastly.net.ipaddress.com/#ipinfo)，获取CDNip和域名
-eg: 140.82.114.4 http://github.com
+eg: 140.82.114.4 `http://github.com`
 2. 再访问[这里](https://github.com.ipaddress.com/#ipinfo)，获取CDNip和域名
-eg: 140.82.114.4 http://github.com
+eg: 140.82.114.4 `http://github.com`
 3. 管理员身份修改本地host文件，映射上面查找到的IP
 Windows：c:Windows-System32-drivers-etc-hosts
 在最后添加：
