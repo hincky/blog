@@ -1,8 +1,8 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
+heroText: Hincky
+tagline: 下面三个都是模板
 actionText: 快速上手 →
 actionLink: /guide/
 features:
