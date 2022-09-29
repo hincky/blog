@@ -29,20 +29,20 @@
 |/mysql|数据库|/docs/mysql/|
 |/tag|标签类型|/docs/tag/|
 
-运行`yarn docs:dev`之后，看到的html页面是docs下面经过渲染的README.md文件。
+运行`yarn docs:dev`之后，看到的html页面是docs下面经过渲染的`README.md`文件。
 
-默认访问/，就是访问README.html，而README.html是由README.md渲染而来
+默认访问/，就是访问`README.html`，而`README.html`是由`README.md`渲染而来
 
-同理，访问/about.html就是访问docs下的about.md
+同理，访问/about.html就是访问docs下的`about.md`
 
-而如果访问/about/，就是访问docs文件夹下about文件夹下的README.md
+而如果访问/about/，就是访问docs文件夹下about文件夹下的`README.md`
 
 
 
 # 配置
 ## 配置文件：选项配置
 配置文件是在docs文件夹下的`.vuepress`文件夹下的`config.js`
-可以对比着[官网的配置](https://www.vuepress.cn/config/)，添加或者更换自己喜欢的配置
+可以对比着[官网的选项配置](https://www.vuepress.cn/config/)，添加或者更换自己喜欢的配置
 
 
 ## 主题配置
@@ -51,9 +51,50 @@
 
 > 下面说说高级的自定义主题
 
-需要自定义主题就直接从[这个官方文档](https://www.vuepress.cn/theme/writing-a-theme.html)参考
-
-建议开启dev分支来开发theme，原因有二
+建议开启dev分支来开发theme，原因有三
 1. 这是全局布局，一旦theme文件目录下有`xxx.vue`之后，整个网站都会遵顼这个文件的布局。如果`xxx.vue`文件里面为空，那页面也是空
 2. `create branch from master` 创建dev分支，不影响master分支，可随意在dev代码上修改
+3. 在完全开发好自定义主题之前，都不要在`.vuepress`目录下创建`theme/global-components/`，否则页面也是为空，因为这个官方的全局组件扫描文件
+
+需要自定义主题就直接从[这个官方文档](https://www.vuepress.cn/theme/writing-a-theme.html)参考
+
+创建并切换到dev分支，并创建好theme的各个目录以及文件，准备开发自定义主题
+
+### 布局组件
+假设你的主题 layouts 目录如下：
+```
+theme
+└── layouts
+   ├── Layout.vue
+   ├── AnotherLayout.vue
+   └── 404.vue
+
+
+```
+所有的页面将会默认使用 `Layout.vue` 作为布局组件，对于那些匹配不到的路由将会使用 `404.vue`。
+
+如果你想要在某一个页面中使用 `AnotherLayout.vue` 作为布局组件，在.md文件里面更新这个页面的 `frontmatter`指定具体的layout组件，如下:
+```
+---
+layout: AnotherLayout
+---
+
+...(md的其他内容)
+```
+
+### 使用插件
+你可以通过主题的配置文件 `theme/index.js` 来给主题应用一些插件：
+```
+// .vuepress/theme/index.js
+module.exports = {
+  plugins: [
+    '@vuepress/pwa',
+    {
+      serviceWorker: true,
+      updatePopup: true
+    }
+  ]
+}
+```
+
 
