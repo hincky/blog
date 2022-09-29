@@ -51,3 +51,9 @@
 
 > 下面说说高级的自定义主题
 
+需要自定义主题就直接从[这个官方文档](https://www.vuepress.cn/theme/writing-a-theme.html)参考
+
+建议开启dev分支来开发theme，原因有二
+1. 这是全局布局，一旦theme文件目录下有`xxx.vue`之后，整个网站都会遵顼这个文件的布局。如果`xxx.vue`文件里面为空，那页面也是空
+2. `create branch from master` 创建dev分支，不影响master分支，可随意在dev代码上修改
+
