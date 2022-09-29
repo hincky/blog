@@ -18,25 +18,32 @@ module.exports = {
       { text: 'k8s', link: '/k8s/' },
       { text: '技术分享', link: '/share/' },
       { text: '算法', link: '/algorithm/' },
+      { text: 'Vue',
+        items: [
+        { text: 'vue', link: '/vue/-/' },
+        { text: 'vue-router', link: '/vue/router/' },
+        { text: 'vue-admin', link: '/vue/admin/' },
+        ]
+      },
       { text: '数据库相关',
         items: [
         { text: 'SQL', link: '/sql/' },
         { text: 'MySQL', link: '/mysql/' },
-        { text: 'Redis', link: '/redis/' }
+        { text: 'Redis', link: '/redis/' },
         ]
       },
       { text: 'Spring相关',
         items: [
         { text: 'spring核心框架', link: '/spring/spring-framework/' },
-        { text: 'Spring Boot', link: '/spring/springboot/' }
+        { text: 'Spring Boot', link: '/spring/springboot/' },
         ]
       },
       { text: '小工具合集',
         items: [
         { text: 'linux命令', link: '/tools/linux-command/' },
         { text: 'docker命令', link: '/tools/docker-command/' },
-        { text: 'k8s命令', link: '/tools/k8s-command/' },
-        { text: 'git命令', link: '/tools/git-command/git' }
+        { text: 'kubectl命令', link: '/tools/k8s-command/' },
+        { text: 'git命令', link: '/tools/git-command/git' },
         ]
       },
       { text: '留言板', link: '/board/' },
