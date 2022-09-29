@@ -2,9 +2,9 @@
 home: true
 # heroImage: /hero.png
 heroText: Hincky
-tagline: 下面三个都是模板
+tagline: 路漫漫其修远兮，吾将上下而求索
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /guide/structure
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
@@ -22,7 +22,7 @@ features:
 
 学习不走弯路，关注公众号「hincky」，看更多通俗易懂的知识！
 
-![img](./img/hincky-ERcode-28KB.jpg)
+![img](./.vuepress/public/assets/img/hincky-ERcode-28KB.jpg)
 
 
 
