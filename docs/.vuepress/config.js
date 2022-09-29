@@ -33,9 +33,10 @@ module.exports = {
         ]
       },
     ],
-  sidebar: [],
-  sidebarDepth: 2,
-  lastUpdated: 'Last Updated'
+    displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
+    sidebar: 'auto',
+    sidebarDepth: 2,
+    lastUpdated: 'Last Updated'
   },
   configureWebpack: {
     resolve: {
