@@ -17,6 +17,7 @@ module.exports = {
       { text: '博客主页', link: '/' },
       { text: 'k8s', link: '/k8s/' },
       { text: '技术分享', link: '/share/' },
+      { text: '算法', link: '/algorithm/' },
       { text: '数据库相关',
         items: [
         { text: 'SQL', link: '/sql/' },

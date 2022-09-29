@@ -1,3 +1,15 @@
+> 开头先做一个声明和资源分享
+
+本网站项目可以直接从我的gitee上直接clone下来，然后再照着文档学习实践
+
+下面是前端的学习资源分享
+
+[vue官网](https://cn.vuejs.org/guide/introduction.html)
+
+[前端工程师2021教程](https://pan.baidu.com/share/init?surl=S6CkYjq-UPPZbHXYQaHDdw)    密码luyr
+
+[吃透前端工程化，大厂项目以战代练](https://pan.baidu.com/share/init?surl=UihCugfAi8Poa7wgAVKquQ&pwd=i12p) 密码i2p
+
 # 网站源码结构介绍
 
 [参考官方网站的目录结构](https://www.vuepress.cn/guide/directory-structure.html)
