@@ -6,8 +6,4 @@ module.exports = {
         updatePopup: true
       }
     ]
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> 44caeb7 (update theme/index.js)
