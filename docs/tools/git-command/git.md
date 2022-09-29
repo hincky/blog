@@ -17,7 +17,6 @@
 |git clone|拷贝一份远程仓库，也就是下载一个项目。|
 
 
-运行`yarn docs:dev`之后，看到的html页面是docs下面经过渲染的README.md文件。
 
 ## 提交与修改
 
