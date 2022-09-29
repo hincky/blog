@@ -76,7 +76,7 @@ Host *github.com
 
 ## git加速
 
-![](img/git-access.jpg)
+![](./img/git-access.jpg)
 
 1. 访问[这里](https://github.global.ssl.fastly.net.ipaddress.com/#ipinfo)，获取CDNip和域名
 eg: 140.82.114.4 `http://github.com`
