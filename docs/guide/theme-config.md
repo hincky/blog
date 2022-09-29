@@ -26,69 +26,28 @@ module.exports = (themeConfig, ctx) => {
 参考:
 [插件 > 使用插件.](https://www.vuepress.cn/plugin/using-a-plugin.html)
 
-注意
 
-你可能不需要使用下面这些带有 Danger Zone 的选项，除非你知道你在做什么！
-
-#devTemplate Danger Zone
+## ssrTemplate Danger Zone
 类型: String
 默认值: undefined
-dev 模式下使用的 HTML 模板路径，默认模板见 这里 (opens new window)。
-
-#ssrTemplate Danger Zone
-类型: String
-默认值: undefined
-build 模式下使用的 HTML 模板路径，默认模板见 这里 (opens new window)。
-
-参考:
-
-Vue SSR Guide > template (opens new window).
-#extend Danger Zone
-类型: String
-默认值: undefined
-// .vuepress/theme/index.js
-module.exports = {
-  extend: '@vuepress/theme-default'
-}
-VuePress 支持一个主题继承于另一个主题。VuePress 将遵循 override 的理念自动帮你解决各种主题属性（如样式、布局组件）的优先级。
-
-参考:
-
-主题继承
-例子: @vuepress/theme-vue(opens new window)
-#globalLayout Danger Zone
-类型: String
-默认值: undefined
-// .vuepress/theme/index.js
-module.exports = {
-  globalLayout: '/path/to/your/global/vue/sfc'
-}
-全局布局组件是负责管理全局布局方案的一个组件，VuePress 默认的 globalLayout (opens new window)会帮你根据 $frontmatter.layout 来渲染不同的布局，所以大部分情况下你不要配置此选项。
-
-举例来说，当你想为当前主题设置全局的 header 和 footer 时，你可以这样做：
-
-<!-- .vuepress/theme/layouts/GlobalLayout.vue -->
-<template>
-  <div id="global-layout">
-    <header><h1>Header</h1></header>
-    <component :is="layout"/>
-    <footer><h1>Footer</h1></footer>
-  </div>
-</template>
-
-<script>
-export default {
-  computed: {
-    layout () {
-      if (this.$page.path) {
-        if (this.$frontmatter.layout) {
-          // 你也可以像默认的 globalLayout 一样首先检测 layout 是否存在
-          return this.$frontmatter.layout
-        }
-        return 'Layout'
-      }
-      return 'NotFound'
-    }
-  }
-}
-</script>
+build 模式下使用的 HTML 模板路径，默认模板:
+```
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="generator" content="VuePress {{ version }}">
+    {{{ userHeadTags }}}
+    {{{ pageMeta }}}
+    {{{ canonicalLink }}}
+    {{{ renderResourceHints() }}}
+    {{{ renderStyles() }}}
+  </head>
+  <body>
+    <!--vue-ssr-outlet-->
+    {{{ renderScripts() }}}
+  </body>
+</html>
+```
