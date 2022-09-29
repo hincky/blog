@@ -14,6 +14,7 @@
 1. [macOS 给 Git(Github) 设置代理（HTTP/SSH）](https://gist.github.com/chuyik/02d0d37a49edc162546441092efae6a1)
 2. git加速
 3. [Git加速必经之路](https://blog.csdn.net/sinat_27672523/article/details/109014301)
+4. [Github加速的10种方式](https://www.cnblogs.com/shuangxinyuan/p/15506449.html)
 
 ## 给github设置http/ssh代理
 ### macOS
@@ -93,6 +94,11 @@ Windows：c:Windows-System32-drivers-etc-hosts
 140.82.113.4 		github.com
 ```
 4. 刷新DNS缓存
+Windows
 ```
 ipconfig /flushdns
+```
+liunx
+```
+systemctl restart network
 ```
