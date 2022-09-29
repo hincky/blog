@@ -16,8 +16,14 @@ module.exports = {
     nav: [
       { text: '博客主页', link: '/' },
       { text: 'k8s', link: '/k8s/' },
-      { text: 'mysql', link: '/mysql/' },
-      { text: 'redis', link: '/redis/' },
+      { text: '技术分享', link: '/share/' },
+      { text: '数据库相关',
+        items: [
+        { text: 'SQL', link: '/sql/' },
+        { text: 'MySQL', link: '/mysql/' },
+        { text: 'Redis', link: '/redis/' }
+        ]
+      },
       { text: 'Spring相关',
         items: [
         { text: 'spring核心框架', link: '/spring/spring-framework/' },
@@ -32,6 +38,7 @@ module.exports = {
         { text: 'git命令', link: '/tools/git-command/git' }
         ]
       },
+      { text: '留言板', link: '/board/' },
     ],
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     sidebar: 'auto',
