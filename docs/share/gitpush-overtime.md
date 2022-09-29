@@ -91,3 +91,7 @@ Windows：c:Windows-System32-drivers-etc-hosts
 
 140.82.113.4 		github.com
 ```
+4. 刷新DNS缓存
+```
+ipconfig /flushdns
+```
