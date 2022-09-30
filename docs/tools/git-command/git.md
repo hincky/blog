@@ -48,11 +48,9 @@
 |:---|:---|
 |git tag base-v1| 为当前分支所在的提交记录打上轻量标签|
 |git tag base-v2 4n45432 |为某次具体的提交记录打上轻量标签|
-|||
+|git tag -a <anotated_name> -m <tag_message>|为当前分支所在的提交记录打上附注标签。|
 |git tag -d tagname |删除某个标签，本质上就是移除.git/refs/tags/ 中对应的文件|
-|||
 |git tag |列出所有tag|
-|||
 |git push remotename --tags |将所有tag推送到远程仓库|
 |git push remotename tagname |将某个具体tag推送到远程仓库|
 |git push <remote> --delete <tag_name> |删除远程仓库中的某个标签|
