@@ -1,29 +1,54 @@
-# Kubernetes
+# git-command
+- [参考菜鸟教程git基本操作](https://www.runoob.com/git/git-basic-operations.html)
+- [你分得清git合并方式rebase和merge吗？](https://www.cnblogs.com/FraserYu/p/11192840.html)
 
+## 创建仓库命令
 
+|命令|说明|
+|:---|:---|
+|git init|初始化仓库|
+|git clone|拷贝一份远程仓库，也就是下载一个项目。|
 
-[官方网址](https://vuepress.vuejs.org/zh/)
+## 提交与修改
 
-## 目录结构说明
-|url|相关内容|文件路径|
-|---|---|---|
-|/|默认路径|/docs/|
-|/k8s|k8s|/docs/k8s/|
-|/mysql|数据库|/docs/mysql/|
-|/tag|标签类型|/docs/tag/|
+|命令|说明|
+|:---|:---|
+|git add|添加文件到暂存区|
+|git status|查看仓库当前的状态，显示有变更的文件。|
+|git diff|比较文件的不同，即暂存区和工作区的差异。|
+|git commit|提交暂存区到本地仓库。|
+|git reset|回退版本。|
+|git rm|将文件从暂存区和工作区中删除。|
+|git mv|移动或重命名工作区文件。|
 
-运行`yarn docs:dev`之后，看到的html页面是docs下面经过渲染的README.md文件。
+## 提交日志
 
-默认访问/，就是访问README.html，而README.html是由README.md渲染而来
+|命令|说明|
+|:---|:---|
+|git log|查看历史提交记录|
+|git blame filename|以列表形式查看指定文件的历史修改记录|
 
-同理，访问/about.html就是访问docs下的about.md
+## 远程操作
 
-而如果访问/about/，就是访问docs文件夹下about文件夹下的README.md
+|命令|说明|
+|:---|:---|
+|git remote|远程仓库操作|
+|git fetch|从远程获取代码库|
+|git pull|下载远程代码并合并|
+|git push|上传远程代码并合并|
 
+## git打tag
+[轻量标签和附注标签的区别](https://blog.csdn.net/qq_21746331/article/details/120776710)
 
+比如多次commit之后确定一个稳定版本，现在要将它打上标签作为一个tag。方便以后查找和回滚
 
-## 配置
-
-配置文件是在docs文件夹下的`.vuepress`文件夹下的`config.js`
-
-对比着官网的配置，可以更换自己喜欢的配置
+|命令|说明|
+|:---|:---|
+|git tag base-v1| 为当前分支所在的提交记录打上轻量标签|
+|git tag base-v2 4n45432 |为某次具体的提交记录打上轻量标签|
+|git tag -a <anotated_name> -m <tag_message>|为当前分支所在的提交记录打上附注标签。|
+|git tag -d tagname |删除某个标签，本质上就是移除.git/refs/tags/ 中对应的文件|
+|git tag |列出所有tag|
+|git push remotename --tags |将所有tag推送到远程仓库|
+|git push remotename tagname |将某个具体tag推送到远程仓库|
+|git push <remote> --delete <tag_name> |删除远程仓库中的某个标签|
