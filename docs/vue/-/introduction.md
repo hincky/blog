@@ -1,5 +1,18 @@
 # vue
 
+# 什么是MVVM模式
+
+MVVM模式：
+- M model，数据模型
+- V即 view，视图
+- VM即 view-model，视图模型
+
+![mvvm](./img/mvvm.png)
+
+理解：后台数据通过`VM`来渲染`V`，就是页面。当用户在页面上进行操作的时候， `VM`会自动监听到用户的操作，从而修改`M`改变后台数据。
+
+> 正式开始vue
+
 [在线10分钟跟着录屏就能学vue基础](https://scrimba.com/learn/vuedocs)
 
 [vue2中文官网地址](https://v2.cn.vuejs.org/v2/guide/#%E8%B5%B7%E6%AD%A5)
