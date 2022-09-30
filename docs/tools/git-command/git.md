@@ -46,3 +46,20 @@
 |git fetch|从远程获取代码库|
 |git pull|下载远程代码并合并|
 |git push|上传远程代码并合并|
+
+## git打tag
+
+比如多次commit之后确定一个稳定版本，现在要将它打上标签作为一个tag。方便以后查找和回滚
+
+|命令|说明|
+|:---|:---|
+|git tag base-v1| 为当前分支所在的提交记录打上轻量标签|
+|git tag base-v2 4n45432 |为某次具体的提交记录打上轻量标签|
+|||
+|git tag -d tagname |删除某个标签，本质上就是移除.git/refs/tags/ 中对应的文件|
+|||
+|git tag |列出所有tag|
+|||
+|git push remotename --tags |将所有tag推送到远程仓库|
+|git push remotename tagname |将某个具体tag推送到远程仓库|
+|git push <remote> --delete <tag_name> |删除远程仓库中的某个标签|
