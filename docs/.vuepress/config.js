@@ -11,7 +11,7 @@ module.exports = {
   ],
   plugins: [],
   themeConfig: {
-    logo: '/assets/img/earth-logo.jpg',
+    logo: '/assets/img/earth-logo-removebg.png',
     // 添加导航栏
     nav: [
       { text: '博客主页', link: '/' },
