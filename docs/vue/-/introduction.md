@@ -92,7 +92,8 @@ v指令和属性
 
 ![components](./img/introduction-components.png)
 
-来看一下官网的例子
+来看一下官网的例子：
+1. 这样定义`todo-item`组件，使之能够接受一个 `prop`，父作用域将数据传到子组件。
 ```
 Vue.component('todo-item', {
   // todo-item 组件现在接受一个
@@ -102,7 +103,7 @@ Vue.component('todo-item', {
   template: '<li>{{ todo.text }}</li>'
 })
 ```
-
+2. 再使用 `v-bind` 指令将待办项传到循环输出的每个组件中：
 ```
 <div id="app-7">
   <ol>
@@ -120,5 +121,34 @@ Vue.component('todo-item', {
   </ol>
 </div>
 ```
+3. 最后注入数据
+```
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
 
-按照官网的说法，这样定义`todo-item`组件，使之能够接受一个 prop，父作用域将数据传到子组件。
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: '蔬菜' },
+      { id: 1, text: '奶酪' },
+      { id: 2, text: '随便其它什么人吃的东西' }
+    ]
+  }
+})
+```
+上面这个例子就是将应用分割成了两个更小的单元。子单元通过 `prop` 接口与父单元进行了良好的解耦。
+
+在一个大型应用中，有必要将整个应用程序划分为组件，以使开发更易管理。下面就是使用了组件的应用模板：
+```
+<div id="app">
+  <app-nav></app-nav>
+  <app-view>
+    <app-sidebar></app-sidebar>
+    <app-content></app-content>
+  </app-view>
+</div>
+```
+
