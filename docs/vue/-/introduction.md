@@ -36,10 +36,19 @@ var app = new Vue({
 vue实例就是通过`el`属性（property），去关联`id`为`app`的DOM
 
 
-## v-指令说明
+## v-bind指令说明
+
+> v-bind:attribute和:attribute作用是一样的，后者是前者是缩写
+
 ```
 <div id="app-2">
   <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+</div>
+
+<div id="app-2">
+  <span :title="message">
     鼠标悬停几秒钟查看此处动态绑定的提示信息！
   </span>
 </div>
@@ -52,11 +61,49 @@ var app2 = new Vue({
   }
 })
 ```
-`v-bind:attribute="xxx"`通过`v-bind`指令，将`span`元素的`title`属性（attribute），与下面vue实例的`message`属性（property），绑定在一起。
+`v-bind:attribute="xxx"`或者`:attribute="xxx"`
+
+通过`v-bind`指令，将`span`元素的`title`属性（attribute），与下面vue实例的`message`属性（property），绑定在一起。
 
 之后在js控制台输入`app2.message='yyy'`，就会看到html页面做出响应更新。
 
 
+## v-for指令说明
+
+```
+<ul>
+  <li v-for="a in list">
+    <span v-if="!a.del">{{a.title}}</span>
+    <span v-else style="text-decoration: line-through">{{a.title}}</span>
+    <button v-show="!a.del">delete</button>
+  </li>
+</ul>
+```
+
+```
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello hincky',
+            list: [{
+                title: '课程1',
+                del: false
+            },{
+                title: '课程2',
+                del: true
+            }],
+        }
+    })
+</script>
+```
+v-for指令在定义的时候就要定义清楚元素的名字
+
+如果li标签里面是`v-for="a in list"`，`v-if`和`v-else`指令就用`a.del`和`a.title`去指代`list`的属性
+
+如果li标签里面是`v-for="item in list"`，`v-if`和`v-else`指令就用`item.del`和`item.title`去指代`list`的属性
+
+同样可以在`console`里面去修改具体dom属性的值，进行响应式查看
 
 ## 初识vue实例
 这一部分建议对照[官网教程](https://v2.cn.vuejs.org/v2/guide/index.html#%E8%B5%B7%E6%AD%A5)的“起步”~“处理用户输入”章节，进行学习与理解
@@ -79,10 +126,10 @@ var app2 = new Vue({
 v指令和属性
 |v-xxx|条件|实例属性property|默认值|属性作用说明|
 |:---|:---:|:---:|:---:|:---|
-|v-bind|绑定|message|string|字符文本|
+|v-bind或:|绑定|message|string|字符文本|
 |v-if|条件|seen|true|是否可见|
 |v-for|循环|todo|text|循环输出文本|
-|v-on|监听事件|click|-|鼠标点击触发事件|
+|v-on或@|监听事件|click|-|鼠标点击触发事件|
 |v-model|表单输入|message|string|字符文本|
 |v-|||||
 
