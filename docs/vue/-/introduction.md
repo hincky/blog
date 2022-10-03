@@ -103,6 +103,8 @@ v-for指令在定义的时候就要定义清楚元素的名字
 
 如果li标签里面是`v-for="item in list"`，`v-if`和`v-else`指令就用`item.del`和`item.title`去指代`list`的属性
 
+`v-for` 和 `v-if`，`v-else`并不一定是配套使用的，`v-if`，`v-else`可以单独使用
+
 同样可以在`console`里面去修改具体dom属性的值，进行响应式查看
 
 ## 初识vue实例
