@@ -89,3 +89,57 @@ vue组件写好之后，如何在html里面使用组件呢？
     </li>
 </ul>
 ```
+
+在原来的todo-list里面的删除，改为vue的事件
+
+在上面的todo-item组件里面，修改两处地方
+1. 添加事件
+```
+<button v-show="!del" @click="handleClick">delete</button>
+```
+2. 定义事件触发后执行的方法
+```
+methods: {
+    handleClick(){
+        console.log('点击删除按钮'),
+    }
+}
+```
+
+同理增加todo-list组件的事件
+1. 添加事件
+```
+<todo-list @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del"></todo-list>
+```
+
+2. 定义要执行的方法
+```
+methods: {
+    handleDelete(){
+        console.log('点击删除按钮')
+    }
+}
+```
+
+由于上面还不能触发delete事件，所以需要手动的抛出来
+在handleClick方法里面，添加一行this.$emit。
+里面的参数：第一个'delete'对应todo-item里面绑定的delete事件，第二this.title就是要传递的参数
+参数传递给handleDelete(val)里面的val
+1. 添加手动抛出事件
+```
+methods: {
+    handleClick(){
+        console.log('点击删除按钮'),
+        this.$emit('delete',this.title)
+    }
+}
+```
+
+2. 接收传递的参数
+```
+methods: {
+    handleDelete(val){
+        console.log('点击删除按钮',val)
+    }
+}
+```
