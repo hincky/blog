@@ -20,7 +20,7 @@ module.exports = {
       { text: '算法', link: '/algorithm/' },
       { text: 'Vue',
         items: [
-        { text: 'vue', link: '/vue/-/' },
+        { text: 'vue', link: '/vue/-/introduction' },
         { text: 'vue-router', link: '/vue/router/' },
         { text: 'vue-admin', link: '/vue/admin/' },
         ]
