@@ -43,6 +43,20 @@ vue实例里面的`data`属性用于保存数据，用于给DOM视图中声明�
 ## 数据与方法
 vm中前面的data是vm的属性，后面的data是用var定义的data对象形式变量
 
+除了数据属性，vue还有实例属性和方法，用`$`表示，和用户定义的属性区分开；例子中的`$data`指的就是用var定义的data对象形式变量
+
+所以`vm.a`作用等同于`vm.$data.a`
+
+### watch使用
+
+看到变量变化前后的值
+
+```
+vm.$watch('变量名',function(newVal,oldVal){
+  console.log(newVal,oldVal)
+})
+```
+
 ```
 html文件
 ...
@@ -69,6 +83,17 @@ vm.$data.a = "test...."
 ...
 
 ```
+
+> 如果要让某对象不再响应式跟踪变化，利用`Object.freeze(obj)`
+
+```
+var obj = {
+  foo: 'bar'
+}
+
+Object.freeze(obj)
+```
+
 
 ## v-bind指令说明
 
