@@ -42,7 +42,7 @@ vue实例里面的`data`属性用于保存数据，用于给DOM视图中声明�
 
 ## v-bind指令说明
 
-> v-bind:attribute和:attribute作用是一样的，后者是前者是缩写
+> v-bind:html-attribute和:html-attribute作用是一样的，后者是前者是缩写
 
 ```html
 <div id="app-2">
@@ -67,7 +67,7 @@ var app2 = new Vue({
 ```
 `v-bind:attribute="xxx"`或者`:attribute="xxx"`
 
-通过`v-bind`指令，将`span`元素的`title`属性（attribute），与下面vue实例的`message`属性（property），绑定在一起。
+`v-bind:title="message"`或者`:title="message"`：通过`v-bind`指令，将`span`元素的`title`属性（attribute），与下面vue实例的`message`属性（property），绑定在一起。
 
 之后在js控制台输入`app2.message='yyy'`，就会看到html页面做出响应更新。
 
@@ -329,10 +329,11 @@ setTimeout(function(){
 ```html
 <div id="app">
 	{{msg}}
-	<p>Using mustaches: {{ rawHtml }}</p>
-	<p v-html="rawHtml"></p>
+	<p>Using mustaches: {{ rawHtml }}</p>   这样是不会显示标签的
+	<p v-html="rawHtml"></p>                这样才能显示标签
 	<div v-bind:class="color">test...</div>
 	<p>{{ number + 1 }}</p>
+  <p>{{ ok ? 'YES' : 'NO' }}</p>
 	<p>{{ 1 == 1 ? 'YES' : 'NO' }}</p>
 	<p>{{ message.split('').reverse().join('') }}</p>
 </div>
