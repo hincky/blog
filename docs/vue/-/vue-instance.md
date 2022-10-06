@@ -5,7 +5,7 @@ vue实例的一般步骤
 - 实例生命周期
 
 ## 创建一个 `Vue` 实例
-```
+```javascript
 var vm = new Vue({
   // 选项
 })

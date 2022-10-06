@@ -3,7 +3,7 @@
 
 1. 创建组件
 组件的名称一定要全局唯一
-```
+```javascript
 Vue.component('todo-item',{//这对{}里面就是组件的配置
     template: xxx,
     props: ...,
@@ -22,7 +22,7 @@ template是要复用的模板，去掉不需要的v-for，和v-if,v-else里面v-
 
 methods在这个对象里面定义一些方法
 
-```
+```javascript
 Vue.component('todo-item',{//这对{}里面就是组件的配置
     props: {
         title: String,
@@ -69,7 +69,7 @@ vue组件写好之后，如何在html里面使用组件呢？
 直接在html里面，通过<component-name></component-name>就可以引入vue组件了
 
 而vue组件里面的属性，通过v-bind指令来取出来
-```
+```html
 <div id="app">
     {{message}}  {{message + message}}
     <div :id="message"></div>
@@ -80,7 +80,7 @@ vue组件写好之后，如何在html里面使用组件呢？
 
 ## 事件
 例子
-```
+```html
 <ul>
     <li v-for="a in list">
         <span v-if="!a.del">{{a.title}}</span>
@@ -94,11 +94,11 @@ vue组件写好之后，如何在html里面使用组件呢？
 
 在上面的todo-item组件里面，修改两处地方
 1. 添加事件
-```
+```html
 <button v-show="!del" @click="handleClick">delete</button>
 ```
 2. 定义事件触发后执行的方法
-```
+```javascript
 methods: {
     handleClick(){
         console.log('点击删除按钮'),
@@ -108,12 +108,12 @@ methods: {
 
 同理增加todo-list组件的事件
 1. 添加事件
-```
+```html
 <todo-list @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del"></todo-list>
 ```
 
 2. 定义要执行的方法
-```
+```javascript
 methods: {
     handleDelete(){
         console.log('点击删除按钮')
@@ -126,7 +126,7 @@ methods: {
 里面的参数：第一个'delete'对应todo-item里面绑定的delete事件，第二this.title就是要传递的参数
 参数传递给handleDelete(val)里面的val
 1. 添加手动抛出事件
-```
+```javascript
 methods: {
     handleClick(){
         console.log('点击删除按钮'),
@@ -136,7 +136,7 @@ methods: {
 ```
 
 2. 接收传递的参数
-```
+```javascript
 methods: {
     handleDelete(val){
         console.log('点击删除按钮',val)

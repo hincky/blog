@@ -7,19 +7,19 @@ vue 核心技术
 
 1. 创建html文件，并导入模板
 2. 在body标签里面添加script标签，src引入cdn。
-```
+```html
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
 ```
 
 3. 创建div标签，id为app，动态变量为message（用{{}}来表示）
-```
+```html
 <div id="app">
     {{message}}
     {{message + message}}
 </div>
 ```
 4. 创建script标签，在里面创建vue实例。el表示关联id为app的dom，data实例储存的数据，名为message，数据为hello hincky
-```
+```html
 <script>
     var vm = new Vue({
         el: '#app',
@@ -31,7 +31,7 @@ vue 核心技术
 ```
 
 
-```
+```html
 <div id="app">
     {{message}}
     {{message + message}}
