@@ -33,8 +33,42 @@ var app = new Vue({
   }
 })
 ```
-vue实例就是通过`el`属性（property），去关联`id`为`app`的DOM
+vue实例就是通过`el`属性（property），作为`id`选择器，去关联`id`为`app`的DOM
 
+vue实例里面的`data`属性用于保存数据，用于给DOM视图中声明的变量进行赋值
+
+动手尝试：
+视图里面div中添加`{{name}}`变量，然后在vue的data属性中进行赋值`name: 'this is vue'`,
+
+## 数据与方法
+vm中前面的data是vm的属性，后面的data是用var定义的data对象形式变量
+
+```
+html文件
+...
+
+<div id="app">
+	{{a}}
+</div>
+
+<script type="text/javascript">
+var data = { a : 1 };
+var vm = new Vue({
+	el   : "#app",
+	data : data
+});
+
+vm.$watch('a', function(newVal, oldVal){
+	console.log(newVal, oldVal);
+})
+
+vm.$data.a = "test...."
+
+</script>
+
+...
+
+```
 
 ## v-bind指令说明
 
