@@ -1,4 +1,4 @@
-# 基础篇
+# 极客时间vue专栏笔记
 vue 核心技术
 事件，插槽
 
@@ -147,7 +147,7 @@ vue组件写好之后，如何在html里面使用组件呢？
 </div>
 ```
 
-## 事件
+## vue事件
 例子
 ```html
 <ul>
@@ -212,3 +212,159 @@ methods: {
     }
 }
 ```
+
+## vue插槽
+插槽就是将`slot`元素作为分发内容的出口
+
+1. 修改，todo-item写在todo-list组件里面，但是并不合理。需要能够自行传入需要渲染的todo-item，而不是直接写死在todo-list里面
+
+修改DOM视图
+```html
+<div id="app">
+    ...
+    <todo-list>
+        <todo-item @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del"></todo-item>
+    </todo-list>
+</div>
+```
+修改之后还不能看到`todo-item`被挂载到DOM上面，因为在`todo-list`组件里面仅仅只有一个`ul`标签，所以需要在`todo-list`组件中`ul`标签里，加一个插槽
+```js
+Vue.component('todo-list',{
+    template: '
+        <ul>
+            <slot></slot>
+        </ul>
+    ',
+```
+
+将todo-list组件里的list剪切到vue对象上，像一开始一样；而且由于handleDelete原本在todo-list上的，现在换到todo-item里面，于是处理事件的方法也要写到vm对象上
+```js
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'hello hincky',
+            list: [{
+                title: '课程1',
+                del: false
+            },{
+                title: '课程2',
+                del: true
+            }],
+        },
+        methods: {
+            handleDelete(val){
+                console.log('点击删除按钮',val)
+            }
+        }
+    })
+</script>
+```
+
+2. 在todo-item的li标签里面分别加前置和后置图标
+
+修改DOM视图
+
+> 旧语法
+
+```html
+<div id="app">
+    ...
+    <todo-list>
+        <todo-item @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del">
+            <span slot="pre-icon">preIcon</span>
+            <span slot="suf-icon">sufIcon</span>
+        </todo-item>
+    </todo-list>
+</div>
+```
+
+> 新语法
+
+```html
+<div id="app">
+    ...
+    <todo-list>
+        <todo-item @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del">
+            <template v-slot:pre-icon>
+                <span>preIcon</span>
+            </template>
+
+            <template v-slot:suf-icon>
+                <span>sufIcon</span>
+            </template>
+        </todo-item>
+    </todo-list>
+</div>
+```
+todo-item组件中同步添加插槽
+```js
+Vue.component('todo-item',{//这对{}里面就是组件的配置
+    ...
+    template: '
+        <li>
+            <slot name="pre-icon"></slot>
+            <span v-if="!del">{{title}}</span>
+            <span v-else style="text-decoration: line-through">{{title}}</span>
+            <slot name="suf-icon"></slot>
+            <button v-show="!del">delete</button>
+        </li>
+    ',
+```
+
+3. 作用域插槽，接收子组件传递的值，返回不同的内容
+
+假设每个item里面，维护一个随机value值
+
+修改todo-item组件,添加data，并修改模板里面的前置图标，获取随机value
+```js
+Vue.component('todo-item',{//这对{}里面就是组件的配置
+    ...
+    data: function(){
+        return {
+            value: Math.random()
+        }
+    },
+    template: '
+        <li>
+            <slot name="pre-icon" :value="value"></slot>
+            <span v-if="!del">{{title}}</span>
+            <span v-else style="text-decoration: line-through">{{title}}</span>
+            <slot name="suf-icon"></slot>
+            <button v-show="!del">delete</button>
+        </li>
+    ',
+```
+
+修改DOM视图，"{value}"表示传递出来的是一个对象，对象的值是value。和上面template的value是对应的
+span里面加上{{value}}
+```html
+<div id="app">
+    ...
+    <todo-list>
+        <todo-item @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del">
+            <template v-slot:pre-icon="{value}">
+                <span>preIcon {{value}}</span>
+            </template>
+
+            <template v-slot:suf-icon>
+                <span>sufIcon</span>
+            </template>
+        </todo-item>
+    </
+```
+
+
+作用域插槽本质上是返回组件的函数，将dom当作函数，template里面通过slot形式来调用了函数，并给函数传递了value值，最终返回到dom里面的span标签
+
+
+## 单文件组件
+vue.component的缺点
+- 要求名字全局定义，大项目不好维护
+- template模板不能代码高亮
+- 不支持css
+- 没有构建步骤
+
+xx.vue的单文件组件，不仅解决上面问题，还提供webpack构建工具
+
+

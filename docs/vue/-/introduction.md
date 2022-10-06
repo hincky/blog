@@ -321,3 +321,33 @@ setTimeout(function(){
 ...
 
 ```
+
+# 模板语法
+
+## 插值
+
+```html
+<div id="app">
+	{{msg}}
+	<p>Using mustaches: {{ rawHtml }}</p>
+	<p v-html="rawHtml"></p>
+	<div v-bind:class="color">test...</div>
+	<p>{{ number + 1 }}</p>
+	<p>{{ 1 == 1 ? 'YES' : 'NO' }}</p>
+	<p>{{ message.split('').reverse().join('') }}</p>
+</div>
+<script type="text/javascript">
+var vm = new Vue({
+	el : "#app",
+	data : {
+		msg : "hi vue",
+		rawHtml : '<span style="color:red">this is should be red</span>',
+		color:'blue',
+		number : 10,
+		ok : 1,
+		message : "vue"
+	}
+});
+vm.msg = "hi....";
+</script>
+```
