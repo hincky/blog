@@ -7,8 +7,6 @@
 - 每个node上都有kubelet：管理node，而且是node与master通信的代理
 - 每个node上都有容器运行时docker或containerd或rkt
 
-![](./img/base-node.png)
-
 node节点一般分为：
 - master管理节点
 - worker工作节点
@@ -17,6 +15,7 @@ node节点一般分为：
 
 **worker**：kubelet，kube-proxy。负责Pod的创建、启动、监控、重启、销毁，以及实现软件模式的负载均衡器。
 
+![](./img/base-node.png)
 
 ## Deployment
 
@@ -27,8 +26,10 @@ node节点一般分为：
 
 ![](./img/base-deployment.png)
 
+master通过deployment将特定副本数量应用实例调度到合适节点上运行，当节点关闭或被删除自动调度到其他节点运行实例。
+
 ```bash
-kubectl create deployment
+kubectl create deployment kubernetes-nginx --image=nginx:1.10
 ```
 
 ## pod
@@ -38,6 +39,11 @@ kubectl create deployment
 
 ![](./img/base-pod.png)
 
+```bash
+kubectl get pods
+kubectl describe pods
+```
+
 ## service
 
 - 唯一指定的名称（eg：mysql-server）
@@ -45,14 +51,17 @@ kubectl create deployment
 - 提供远程服务能力
 - 将请求转发到一组容器应用上
 
-![](./img/base-service.png)
-
 service和pod的联系
-
-1. service对应一个或者多个pod
+1. service对应一个或者多个pod，service定义了一组pod的逻辑集
 2. 每个pod都贴上标签Label（eg：运行php的pod标签是name=mysql）
 3. service定义标签选择器（eg：PHP service标签选择器作用与所有包含name=php的pod）
 4. 不是每个pod和它里面运行的容器都能被映射到一个service上，只有提供服务（对内对外都行）的那组pod才会被映射为一个服务。
+
+![](./img/base-service.png)
+
+```bash
+kubectl get svc
+```
 
 # k8s应用部署实践
 
