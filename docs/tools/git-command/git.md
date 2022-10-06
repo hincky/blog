@@ -1,6 +1,3 @@
----
-
----
 # git-command
 
 - [参考菜鸟教程git基本操作](https://www.runoob.com/git/git-basic-operations.html)
@@ -42,7 +39,6 @@
 |git push|上传远程代码并合并|
 
 ## git打tag
-[轻量标签和附注标签的区别](https://blog.csdn.net/qq_21746331/article/details/120776710)
 
 [轻量标签和附注标签的区别](https://blog.csdn.net/qq_21746331/article/details/120776710)
 
