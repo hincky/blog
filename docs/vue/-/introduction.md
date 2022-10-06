@@ -263,7 +263,13 @@ Object.freeze(obj)
 
 [官网生命周期钩子API](https://v2.cn.vuejs.org/v2/api/#%E9%80%89%E9%A1%B9-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90)
 
-生命周期钩子需要以属性的方式写在`new Vue`对象里面
+生命周期钩子需要以属性的方式写在`new Vue`对象里面，执行顺序
+beforeCreate
+created
+beforeMount
+mounted
+beforeUpdate
+updated
 
 ```html
 html
@@ -277,7 +283,7 @@ var vm = new Vue({
 	data : {
 		msg : "hi vue",
 	},
-	//在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
+	//在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。(也可以是整个页面创建之前)
 	beforeCreate:function(){
 		console.log('beforeCreate');
 	},

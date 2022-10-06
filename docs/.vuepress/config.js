@@ -23,6 +23,7 @@ module.exports = {
         { text: 'vue', link: '/vue/-/introduction' },
         { text: 'vue-router', link: '/vue/router/' },
         { text: 'vue-admin', link: '/vue/admin/' },
+        { text: 'geek', link: '/vue/geek/base' },
         ]
       },
       { text: '数据库相关',
@@ -43,7 +44,7 @@ module.exports = {
         { text: 'linux命令', link: '/tools/linux-command/' },
         { text: 'docker命令', link: '/tools/docker-command/' },
         { text: 'kubectl命令', link: '/tools/k8s-command/' },
-        { text: 'git命令', link: '/tools/git-command/git' }
+        { text: 'git命令', link: '/tools/git-command/git' },
         ]
       },
       { text: '留言板', link: '/board/' },
