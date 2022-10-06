@@ -20,8 +20,10 @@
 |命令|说明|
 |:---|:---|
 |kubectl get deploy/deployment|查看所有deployments|
-|kubectl describe deployment||
-|kubectl ||
+|kubectl describe deployment|查看deployment详细信息|
+|kubectl scale deployments/kubernetes-nginx --replicas=4|通过deployment对应用数量缩放到4个副本|
+|kubectl set image deployments/kubernetes-nginx nginx=nginx:1.19|滚动更新pod镜像版本|
+|kubectl rollout undo deployments/kubernetes-nginx|回滚到原来的pod镜像版本|
 
 ## pod
 |命令|说明|
@@ -31,6 +33,7 @@
 |kubectl get pods -l app=kubernetes-nginx|通过label查询pod|
 |kubectl describe pods|查看pod详细信息|
 |kubectl describe pods $POD_NAME|查看具体pod的详细信息|
+|kubectl describe pods |grep Image|查看pod镜像版本号|
 |export POD_NAME=kubernetes-nginx-78bcc44665-8fnnn|将Pod的名称设置为环境变量，方便以$POD_NAME使用|
 |kubectl logs $POD_NAME|查看Pod打印的日志|
 |kubectl exec $POD_NAME -- env|使用exec和env命令查看pod容器环境变量|
@@ -68,11 +71,11 @@
 ## replica set
 |命令|说明|
 |:---|:---|
-|kubectl get rs|lists replica sets|
+|kubectl get rs|获取所有rs|
 |kubectl ||
 
 ## log
 |命令|说明|
 |:---|:---|
-|kubectl logs podName|查看Pod打印的日志|
+|kubectl logs $POD_NAME|查看Pod打印的日志|
 |kubectl ||

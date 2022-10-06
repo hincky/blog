@@ -26,6 +26,8 @@ node节点一般分为：
 
 ![](./img/base-deployment.png)
 
+replicaSet：确保任何时间都有指定数量的pod运行，建议用deployment来管理rs
+
 master通过deployment将特定副本数量应用实例调度到合适节点上运行，当节点关闭或被删除自动调度到其他节点运行实例。
 
 ```bash
@@ -62,6 +64,13 @@ service和pod的联系
 ```bash
 kubectl get svc
 ```
+
+## configMap
+说白了就是一个资源的yaml文件
+
+> 是一种API对象，用来将非机密性的数据保存到键值对中。使用时，Pod可以将其用作环境变量、命令行参数或者存储卷中的配置文件。使用ConfigMap可以将你的配置数据和应用程序代码分开。
+
+ConfigMap允许你**将配置文件与镜像文件分离**，以使**容器化的应用程序具有可移植性**。
 
 # k8s应用部署实践
 
