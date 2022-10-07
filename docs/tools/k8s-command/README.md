@@ -30,6 +30,7 @@
 |:---|:---|
 |kubectl get po/pods|查看所有的pod状态|
 |kubectl get pods -o wide|查看所有的pod状态|
+|kubectl get pods -n kube-system|通过namespace查询pod|
 |kubectl get pods -l app=kubernetes-nginx|通过label查询pod|
 |kubectl describe pods|查看pod详细信息|
 |kubectl describe pods $POD_NAME|查看具体pod的详细信息|
