@@ -4,9 +4,9 @@
 
 > 本文介绍的是helm的方式安装
 
-[k8s的manifest方式安装](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
+[利用k8s的manifest方式安装](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
 
-[helm方式安装](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/)
+[利用helm方式安装](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/)
 
 将项目克隆到本地
 
