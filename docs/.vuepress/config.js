@@ -25,6 +25,12 @@ module.exports = {
         { text: 'geek', link: '/vue/geek/base' },
         ]
       },
+      { text: 'Spring相关',
+        items: [
+        { text: 'spring核心框架', link: '/spring/spring-framework/' },
+        { text: 'Spring Boot', link: '/spring/springboot/' },
+        ]
+      },
       { text: '数据库相关',
         items: [
         { text: 'SQL', link: '/database/sql/' },
@@ -39,10 +45,10 @@ module.exports = {
         { text: 'docker', link: '/operation/docker/' },
         ]
       },
-      { text: 'Spring相关',
+      { text: '协议',
         items: [
-        { text: 'spring核心框架', link: '/spring/spring-framework/' },
-        { text: 'Spring Boot', link: '/spring/springboot/' },
+        { text: 'http', link: '/protocol/http/' },
+        { text: 'tcp', link: '/protocol/tcp/' },
         ]
       },
       { text: '小工具合集',
