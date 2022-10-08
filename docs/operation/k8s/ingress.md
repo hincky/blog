@@ -1,6 +1,7 @@
 # ingress:集群的流量出入口
 
 > 本节三个重要角色：
+
 - `ingress`
 - `ingress class`
 - `ingress controller`
@@ -20,13 +21,15 @@ service适合进群内部的相互访问，如果要对外暴露，只能走两�
 
 由于service本质上是一个由 `kube-proxy` 控制的四层负载均衡，在 `TCP/IP` 协议栈上转发流量，只能够依据 IP 地址和端口号做一些简单的判断和组合：
 
-![](./img/service.webp)
+![](./img/service.png)
 
 而跑在七层的 `HTTP/HTTPS` 协议上的，有更多的高级路由条件，比如主机名、URI、请求头、证书等等。
 
 而这些在 `TCP/IP` 网络栈里是根本看不见的，因此`service`并不能完全解决网络流量的管理问题。
 
-> 总结以上两点，所以k8s需要新的api对象：`ingress`，来作为七层的负载均衡
+### 小结
+
+综合以上两点，所以k8s需要新的api对象：`ingress`，来作为七层的负载均衡
 
 ## 为什么要有ingress controller
 
