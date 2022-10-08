@@ -42,7 +42,13 @@
 
 [artifacthub-chart库](https://artifacthub.io/packages/search?kind=0)
 
+配置helm阿里源，微软源
+
 ```bash
+helm repo add aliyun https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
+
+helm repo add stable http://mirror.azure.cn/kubernetes/charts
+
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 

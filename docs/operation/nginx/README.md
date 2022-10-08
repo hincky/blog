@@ -1,3 +1,9 @@
+# nginx
+
+## k8s 安装nginx
+
+
+
 # 安装nginx ingress controller
 
 [nginx ingress controller官网地址](https://docs.nginx.com/nginx-ingress-controller/)
