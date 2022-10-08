@@ -28,9 +28,10 @@ module.exports = {
       },
       { text: '数据库相关',
         items: [
-        { text: 'SQL', link: '/sql/' },
-        { text: 'MySQL', link: '/mysql/' },
-        { text: 'Redis', link: '/redis/' },
+        { text: 'SQL', link: '/database/sql/' },
+        { text: 'MySQL', link: '/database/mysql/' },
+        { text: 'Redis', link: '/database/redis/' },
+        { text: 'Mongo', link: '/database/mongo/' },
         ]
       },
       { text: 'Spring相关',
