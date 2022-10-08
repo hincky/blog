@@ -18,8 +18,8 @@
 |git status|查看仓库当前的状态，显示有变更的文件。|
 |git diff|比较文件的不同，即暂存区和工作区的差异。|
 |git commit|提交暂存区到本地仓库。|
-|git reset|回退版本。|
 |git rm|将文件从暂存区和工作区中删除。|
+|git rm --cache filename | 将文件添加到ignore中，修改后不记录到git中|
 |git mv|移动或重命名工作区文件。|
 
 ## 提交日志
@@ -55,3 +55,24 @@
 |git push remotename tagname |将某个具体tag推送到远程仓库|
 |git push remote --delete tag_name |删除远程仓库中的某个标签|
 
+## git 配置
+
+|命令|说明|
+|:---|:---|
+|git config --global user.name hincky|添加全局配置|
+|git config --global user.email yyjtech@outlook.com|添加全局配置|
+|git config --global -l|列出global的所有配置|
+|git config --global http.proxy http://127.0.0.1:1080 |添加https代理配置|
+|git config --global https.proxy https://127.0.0.1:1080 |添加https代理配置|
+|git config --global --unset https.proxy|取消https代理配置|
+|git config --global https.https://github.com.proxy https://127.0.0.1:7890 |添加https代理配置|
+|git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 |添加socks5代理配置|
+|git config --global --unset https.proxy|取消https代理配置|
+
+
+## git 回滚
+
+|命令|说明|
+|:---|:---|
+|git reset|回退版本。|
+|git reset --hard 234joo|回滚/退到具体某个版本|
