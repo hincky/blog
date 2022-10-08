@@ -30,5 +30,5 @@ features:
 
 
 ::: slot footer
-[粤ICP备334325号-1](https://beian.miit.gov.cn/)|Copyright © 2022 [Hincky](https://github.com/hincky) 
+[粤ICP备2022120427号](https://beian.miit.gov.cn/)|Copyright © 2022 [Hincky](https://github.com/hincky) 
 :::

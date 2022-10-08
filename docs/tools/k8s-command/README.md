@@ -13,6 +13,7 @@
 ## node
 |命令|说明|
 |:---|:---|
+|kubectl version|查看集群版本信息|
 |kubectl cluster-info|查看集群详细信息|
 |kubectl get node|查看集群中的所有Node|
 
