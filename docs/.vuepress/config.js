@@ -15,7 +15,6 @@ module.exports = {
     // 添加导航栏
     nav: [
       { text: '博客主页', link: '/' },
-      { text: 'k8s', link: '/k8s/' },
       { text: '技术分享', link: '/share/' },
       { text: '算法', link: '/algorithm/' },
       { text: 'Vue',
@@ -32,6 +31,12 @@ module.exports = {
         { text: 'MySQL', link: '/database/mysql/' },
         { text: 'Redis', link: '/database/redis/' },
         { text: 'Mongo', link: '/database/mongo/' },
+        ]
+      },
+      { text: '运维',
+        items: [
+        { text: 'k8s', link: '/operation/k8s/' },
+        { text: 'docker', link: '/operation/docker/' },
         ]
       },
       { text: 'Spring相关',
