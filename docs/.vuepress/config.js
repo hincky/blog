@@ -45,6 +45,7 @@ module.exports = {
         { text: 'docker', link: '/operation/docker/' },
         { text: 'prometheus', link: '/operation/prometheus/' },
         { text: 'grafana', link: '/operation/grafana/' },
+        { text: 'helm', link: '/operation/helm/' },
         ]
       },
       { text: '协议',
