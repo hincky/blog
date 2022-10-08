@@ -17,7 +17,7 @@ module.exports = {
       { text: '博客主页', link: '/' },
       { text: '技术分享', link: '/share/' },
       { text: '算法', link: '/algorithm/' },
-      { text: 'Vue',
+      { text: 'vue',
         items: [
         { text: 'vue', link: '/vue/-/introduction' },
         { text: 'vue-router', link: '/vue/router/' },
@@ -25,7 +25,7 @@ module.exports = {
         { text: 'geek', link: '/vue/geek/base' },
         ]
       },
-      { text: 'Spring相关',
+      { text: 'spring',
         items: [
         { text: 'spring核心框架', link: '/spring/spring-framework/' },
         { text: 'Spring Boot', link: '/spring/springboot/' },
@@ -33,10 +33,10 @@ module.exports = {
       },
       { text: '数据库相关',
         items: [
-        { text: 'SQL', link: '/database/sql/' },
-        { text: 'MySQL', link: '/database/mysql/' },
-        { text: 'Redis', link: '/database/redis/' },
-        { text: 'Mongo', link: '/database/mongo/' },
+        { text: 'sql', link: '/database/sql/' },
+        { text: 'mysql', link: '/database/mysql/' },
+        { text: 'redis', link: '/database/redis/' },
+        { text: 'mongo', link: '/database/mongo/' },
         ]
       },
       { text: '运维',
