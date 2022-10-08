@@ -43,6 +43,8 @@ module.exports = {
         items: [
         { text: 'k8s', link: '/operation/k8s/' },
         { text: 'docker', link: '/operation/docker/' },
+        { text: 'prometheus', link: '/operation/prometheus/' },
+        { text: 'grafana', link: '/operation/grafana/' },
         ]
       },
       { text: '协议',
