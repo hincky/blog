@@ -65,8 +65,10 @@
 |git config --global http.proxy http://127.0.0.1:1080 |添加https代理配置|
 |git config --global https.proxy https://127.0.0.1:1080 |添加https代理配置|
 |git config --global --unset https.proxy|取消https代理配置|
-|git config --global https.https://github.com.proxy https://127.0.0.1:7890 |添加https代理配置|
-|git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 |添加socks5代理配置|
+|git config --global https.https://github.com.proxy https://127.0.0.1:7890 |添加对github的https代理配置|
+|git config --global http.https://github.com.proxy socks5://127.0.0.1:7890 |添加对github的socks5代理配置|
+|git config --global --unset http.https://github.com.proxy https://127.0.0.1:7890 |取消对github的socks5代理配置|
+|git config --global --unset http.https://github.com.proxy socks5://127.0.0.1:7890 |取消对github的socks5代理配置|
 |git config --global --unset https.proxy|取消https代理配置|
 
 
