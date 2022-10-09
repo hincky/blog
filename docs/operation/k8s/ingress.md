@@ -66,3 +66,39 @@ K8s 用户可以转向管理 `Ingress Class`，用它来定义不同的业务逻
 
 ![](./img/ingress-class.png)
 
+## 实战：如何用yaml编写ingress，ingress class
+
+像之前学习 `Deployment`、`Service` 对象一样，首先用命令 `kubectl api-resources` 查看它们的基本信息
+
+```bash
+kubectl api-resources | grep ingress
+```
+
+打印结果
+
+```bash
+[root@master deployment]# kubectl api-resources | grep ingress
+NAME                SHORTNAMES      APIVERSION          NAMESPACED     KIND
+ingressclasses                   networking.k8s.io/v1     false       IngressClass
+ingresses               ing      networking.k8s.io/v1     true        Ingress
+```
+没有`Ingress Controller`是因为它和其他两个对象不太一样
+
+它不只是描述文件，是一个要实际干活、处理流量的应用程序。
+
+而应用程序在 K8s 里早就有对象来管理了，那就是 `Deployment` 和 `DaemonSet`
+
+所以我们只需要再学习 `Ingress` 和 `Ingress Class` 的用法就可以了。
+
+### ingress.yml
+
+```yaml
+
+```
+
+### ingress-class.yml
+
+```yaml
+
+```
+

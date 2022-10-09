@@ -10,3 +10,19 @@
 `Service` 本身是没有服务能力的，它只是一些 `iptables` 规则。
 
 节点里的 `kube-proxy` 组件才是真正配置、应用这些规则的。如果没有 `kube-proxy`，`Service` 定义得再完善也没有用。
+
+
+## 实战：如何用yaml编写service，kube-proxy
+
+首先用命令 `kubectl api-resources` 查看它们的基本信息
+
+```bash
+kubectl api-resources | grep services 
+```
+
+打印结果
+
+```bash
+[root@master deployment]# kubectl api-resources | grep services
+services      svc      v1      true      Service
+```
