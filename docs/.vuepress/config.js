@@ -60,6 +60,7 @@ module.exports = {
         { text: 'linux命令', link: '/tools/linux-command/' },
         { text: 'docker命令', link: '/tools/docker-command/' },
         { text: 'kubectl命令', link: '/tools/k8s-command/' },
+        { text: 'crictl命令', link: '/tools/cri-command/' },
         { text: 'git命令', link: '/tools/git-command/git' },
         ]
       },

@@ -7,7 +7,7 @@
 下图给出了NIC和k8s的版本匹配关系图
 ![](./img/suppot-k8s-version.png)
 
-笔者的k8s集群是1.24，所以对应安装2.3.1的NIC即可
+
 
 [其他NIC版本参考官网github](https://github.com/nginxinc/kubernetes-ingress/releases)
 
@@ -17,7 +17,7 @@
 
 [更多安装方式参考官网地址](https://docs.nginx.com/nginx-ingress-controller/installation/)
 
-将项目克隆到本地，注意**对应好版本**
+将项目克隆到本地，注意**对应好版本**，笔者的k8s集群是`1.24`，所以对应安装`2.3.1`的NIC即可
 
 ```bash
 git clone https://github.com/nginxinc/kubernetes-ingress.git --branch v2.3.1
