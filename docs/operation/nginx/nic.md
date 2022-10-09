@@ -32,19 +32,23 @@ helm repo add nginx-stable https://helm.nginx.com/stable
 helm repo update
 ```
 
-## 安装步骤
+## 安装chart
 
-有了chart资源后，就能安装nginx了，下面二者选其一
+创建命名空间，不然就安装到默认命名空间去了
 
-- 通过chart资源
 ```bash
-helm install my-release .
+kubectl create ns nginx-ingress
 ```
 
-- 通过helm仓库
+有了chart资源后，就能安装nginx了
+
+- 通过helm仓库安装
 ```bash
-helm install my-release nginx-stable/nginx-ingress
+helm install hincky nginx-stable/nginx-ingress -n nginx-ingress
 ```
+好了之后就能根据ns查看了
+
+![](./img/nginx-ingres-po-svc.png)
 
 ## nginx命令
 
