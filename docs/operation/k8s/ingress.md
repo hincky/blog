@@ -52,6 +52,8 @@ service适合进群内部的相互访问，如果要对外暴露，只能走两�
 
 ![](./img/nginx-ingress-controller.png)
 
+nic可以将ingress对象转化成Nginx的配置文件并使之生效
+
 ## 为什么要有 ingress class
 
 随着 `Ingress` 规则太多，都交给一个 `Ingress Controller` 处理会让它不堪重负:
@@ -66,7 +68,7 @@ K8s 用户可以转向管理 `Ingress Class`，用它来定义不同的业务逻
 
 ![](./img/ingress-class.png)
 
-## 实战：如何用yaml编写ingress，ingress class
+## 如何用yaml编写ingress，ingress class
 
 像之前学习 `Deployment`、`Service` 对象一样，首先用命令 `kubectl api-resources` 查看它们的基本信息
 
@@ -82,6 +84,8 @@ NAME                SHORTNAMES      APIVERSION          NAMESPACED     KIND
 ingressclasses                   networking.k8s.io/v1     false       IngressClass
 ingresses               ing      networking.k8s.io/v1     true        Ingress
 ```
+`ingress`的简写是`ing`，两者的版本都是`networking.k8s.io/v1`
+
 没有`Ingress Controller`是因为它和其他两个对象不太一样
 
 它不只是描述文件，是一个要实际干活、处理流量的应用程序。
@@ -92,13 +96,103 @@ ingresses               ing      networking.k8s.io/v1     true        Ingress
 
 ### ingress.yml
 
-```yaml
+#### 创建模板yaml
 
+使用 `kubectl create` 来创建模板文件，需要加两个参数：
+- --class，指定 Ingress 从属的 Ingress Class 对象。
+- --rule，指定路由规则，基本形式是“URI=Service”，也就是说是访问 HTTP 路径就转发到对应的 Service 对象，再由 Service 对象转发给后端的 Pod。
+
+```bash
+export out="--dry-run=client -o yaml"
+kubectl create ing ngx-ing --rule="ngx.test/=ngx-svc:80" --class=ngx-ink $out
 ```
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ngx-ing
+spec:
+  ingressClassName: ngx-ink  #对应参数 --class=ngx-ink 
+  rules:
+  - host: ngx.test  #对应参数 --rule="ngx.test/=ngx-svc:80"
+    http:
+      paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: ngx-svc  # --rule="ngx.test/=ngx-svc:80"
+            port:
+              number: 80   # --rule="ngx.test/=ngx-svc:80"
+```
+
 
 ### ingress-class.yml
 
-```yaml
+`ingress class`只是起到联系 `Ingress` 和 `Ingress Controller` 的作用。
 
+所以它的定义非常简单，在“spec”里只有一个必需的字段“controller”，表示要使用哪个 Ingress Controller，具体的名字就要看实现文档了。
+
+比如nginx的`IngressClass`，就要在`spec`里面标明`nginx.org/ingress-controller`
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: ngx-ink
+
+spec:
+  controller: nginx.org/ingress-controller
 ```
+
+下图是`Ingress`，`ingress class`，`service` yaml文件的对应关系  
+
+![](./img/ingress-service-ingressclass.png)
+
+由于`ingress class`的yaml文件比较小，因此将其和`ingress`的yaml合并为单个`ingress.yml`方便使用
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ngx-ing
+spec:
+  ingressClassName: ngx-ink  #对应参数 --class=ngx-ink 
+  rules:
+  - host: ngx.test  #对应参数 --rule="ngx.test/=ngx-svc:80"
+    http:
+      paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: ngx-svc  # --rule="ngx.test/=ngx-svc:80"
+            port:
+              number: 80   # --rule="ngx.test/=ngx-svc:80"
+---
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: ngx-ink
+spec:
+  controller: nginx.org/ingress-controller
+---
+```
+
+## 在k8s中使用ingress，ingress class
+
+
+
+## 在k8s中使用ingress controller
+
+ic本质上是一个pod，所以支持deployment和daemonSet两种方式部署到k8s上面。
+
+所以部署步骤
+1. 给ic创建namespace
+2. deployment部署ic的pod
+3. service对外暴露ic的pod，以供访问
+
+最后贴出ic，ingress，ingressClass，service的对应关系图
+
+![](./img/ingressController-ingress-service-ingressClass.png)
 
