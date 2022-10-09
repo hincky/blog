@@ -46,7 +46,7 @@ module.exports = {
         { text: 'helm', link: '/operation/helm/' },
         { text: 'prometheus', link: '/operation/prometheus/' },
         { text: 'grafana', link: '/operation/grafana/' },
-        { text: 'nginx', link: '/operation/nginx/' },
+        { text: 'nginx', link: '/operation/nginx/nic' },
         ]
       },
       { text: '协议',
