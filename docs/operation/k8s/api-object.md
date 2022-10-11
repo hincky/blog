@@ -1,0 +1,117 @@
+# API对象
+
+> 控制器模式
+
+每一个 API 对象都有一个叫作 Metadata 的字段，这个字段就是 API 对象的“标识”，即元数据，它也是我们从 Kubernetes 里找到这个对象的主要依据
+
+## 创建对象的yaml文件
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  Label:
+...
+  Annotation:
+```
+
+一个 Kubernetes 的 API 对象的定义：
+-  Metadata 
+-  Spec 
+
+前者存放的是这个对象的元数据，对所有 API 对象来说，这一部分的字段和格式基本上是一样的；而后者存放的，则是属于这个对象独有的定义，用来描述它所要表达的功能。
+
+
+Labels 就是一组 key-value 格式的标签，而像 Deployment 这样的控制器对象，就可以通过这个 Labels 字段从 Kubernetes 中过滤出它所关心的被控制对象。
+
+Annotations（和Labels同层级），它专门用来携带 key-value 格式的内部信息。大多是自动加上去的
+
+## 通过yaml创建/更新对象
+
+```bash
+kubectl apply -f xxx.yaml
+```
+
+
+```bash
+
+$ kubectl get pods -l app=nginx
+NAME                                READY     STATUS    RESTARTS   AGE
+nginx-deployment-67594d6bf6-9gdvr   1/1       Running   0          10m
+nginx-deployment-67594d6bf6-v6j7w   1/1       Running   0          10m
+```
+
+-l 参数，即获取所有匹配 app: nginx 标签的 Pod。需要注意的是，在命令行中，所有 key-value 格式的参数，都使用“=”而非“:”表示。
+
+```bash
+kubectl describe pod nginx-deployment-67594d6bf6-9gdvr
+```
+
+kubectl describe 命令返回详细信息，重点关注Event事件，它表示对 API 对象的所有重要操作，都会被记录在这个对象的 Events 里，是进行 Debug 的重要依据。
+
+
+## 更新yaml文件来更新对象
+
+修改了对象的yaml文件之后，通过下面的指令更新
+
+```bash
+kubectl replace -f nginx-deployment.yaml
+```
+
+## 给对象声明 volume 
+
+volume 属于pod对象的一部分，修改这个 YAML 文件里的 template.spec 字段
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.8
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: nginx-vol
+      volumes:
+      - name: nginx-vol
+        emptyDir: {}
+```
+
+Pod 声明的所有 Volume。它的名字叫作 nginx-vol，类型是 emptyDir（这个类似 Docker 的隐式 Volume 参数，即：不显式声明宿主机目录的 Volume）
+
+Kubernetes 也会在宿主机上创建一个临时目录，这个目录将来就会被绑定挂载到容器所声明的 Volume 目录上。
+
+     Kubernetes 的 emptyDir 类型，只是把 Kubernetes 创建的临时目录作为 Volume 的宿主机目录，交给了 Docker。这么做的原因，是 Kubernetes 不想依赖 Docker 自己创建的那个 _data 目录。
+
+
+
+```bash
+
+```
+
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
