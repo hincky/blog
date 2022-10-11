@@ -2,7 +2,13 @@
 
 [官网命令参考](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-)
 
-创建/删除资源
+## 通用
+|命令|说明|
+|:---|:---|
+|kubectl api-resources|查看k8s资源以及缩写|
+|kubectl create cj echo-cj --image=busybox --schedule="" --dry-run=client -o yaml|生成cronjob模板yaml，要生成其他对象改掉cj即可|
+
+## 创建/删除资源
 
 |命令|说明|
 |:---|:---|
