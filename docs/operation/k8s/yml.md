@@ -122,6 +122,8 @@ apply运行之后，里面的pod就是打印helloworld而已。Job 业务的特�
 
 > 下面的job例子展示`job`更牛逼的优势
 
+创建一个 Job 对象，名字叫“sleep-job”，它随机睡眠一段时间再退出，模拟运行时间较长的作业（比如 MapReduce）。Job 的参数设置成 15 秒超时，最多重试 2 次，总共需要运行完 4 个 Pod，但同一时刻最多并发 2 个 Pod：
+
 ```yaml
 apiVersion: batch/v1
 kind: Job
@@ -147,8 +149,13 @@ spec:
           - sleep $(($RANDOM % 10 + 1)) && echo done
 ```
 
+惯例apply运行之后，这次通过`kubectl get po -w`持续观察看到 Pod 不断被排队、创建、运行的过程:
 
+![](./img/get-pod-w.png)
 
+等到 4 个 Pod 都运行完毕，我们再用 kubectl get 来看看 Job 和 Pod 的状态：
+
+![](./img/get-job-pod.png)
 
 ### cronjob
 apiVersion一定是batch/v1
