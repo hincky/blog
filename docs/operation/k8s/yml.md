@@ -204,6 +204,11 @@ apply运行之后，使用 `kubectl get cj、kubectl get pod` 来查看状态：
 
 ![](./img/get-cronjob.png)
 
+## ConfigMap/Secret
+
+
+
+
 ## deployment
 
 ```yml
