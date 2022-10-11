@@ -159,7 +159,50 @@ spec:
 
 ### cronjob
 apiVersion一定是batch/v1
-kind一定是Jod
+kind一定是CronJob
+
+生成cj的模板yaml文件
+
+```bash
+export out="--dry-run=client -o yaml"              # 定义Shell变量
+kubectl create cj echo-cj --image=busybox --schedule="" $out
+```
+```yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: echo-cj
+
+spec:
+  schedule: '*/1 * * * *'
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - image: busybox
+            name: echo-cj
+            imagePullPolicy: IfNotPresent
+            command: ["/bin/echo"]
+            args: ["hello", "world"]
+```
+
+好家伙三个spec嵌套，其实不难：
+
+- 第一个 spec 是 CronJob 自己的对象规格声明
+- 第二个 spec 从属于“jobTemplate”，它定义了一个 Job 对象。
+- 第三个 spec 从属于“template”，它定义了 Job 里运行的 Pod。
+
+![](./img/cronjob.png)
+
+除了定义 Job 对象的“jobTemplate”字段之外，CronJob 还有一个新字段就是“schedule”，用来定义任务周期运行的规则。
+
+类比crontab定时任务的用法，指定分钟、小时、天、月、周，和 Linux 上的 crontab 是一样的。
+
+apply运行之后，使用 `kubectl get cj、kubectl get pod` 来查看状态：
+
+![](./img/get-cronjob.png)
 
 ## deployment
 
