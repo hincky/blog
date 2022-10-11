@@ -1,5 +1,7 @@
 # crictl 命令
 
+[github-install-containerd](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
+[install crictl 1](https://www.yangpiqiulaotou.cn/2021/05/10/Crictl%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/)
 [github文档](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 
 ## pod
@@ -33,4 +35,42 @@
 |:---|:---|
 |crictl logs 87d3992f84f74|获取容器的所有日志|
 |crictl logs --tail=N 87d3992f84f74|获取最近的 N 行日志|
+
+
+
+```bash
+cat >> /etc/hosts << EOF
+127.0.0.1   $(hostname)
+10.0.20.6   master
+10.0.8.13   node2
+10.0.8.12   node1
+43.138.161.91   master
+43.138.197.127   node2
+43.138.215.165   node1
+EOF
+
+
+cat >> /etc/NetworkManager/conf.d/rke2-canal.conf << EOF
+[keyfile]
+unmanaged-devices=interface-name:cali*;interface-name:flannel*
+EOF
+
+systemctl reload NetworkManager
+
+```
+
+
+cat >> /etc/hosts << EOF
+127.0.0.1   $(hostname)
+10.0.20.6   master
+10.0.8.13   node2
+10.0.8.12   node1
+43.138.161.91   master
+43.138.197.127   node2
+43.138.215.165   node1
+EOF
+
+
+
+curl -LO https://dl.k8s.io/release/v1.22.13/bin/linux/amd64/kubectl
 

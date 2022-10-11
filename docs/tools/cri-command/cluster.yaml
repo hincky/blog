@@ -1,0 +1,207 @@
+nodes:
+- address: 10.0.20.6
+  user: rke
+  role:
+    - controlplane
+    - etcd
+    port: 22
+    docker_socket: /var/run/docker.sock
+  - address: 10.0.8.12
+    user: rke
+    role:
+      - worker
+    ssh_key_path: /home/rke/.ssh/id_rsa
+    ssh_cert_path: /home/rke/.ssh/id_rsa.pub
+  - address: 10.0.8.13
+    user: rke
+    role:
+      - worker
+    hostname_override: node2
+    internal_address: 10.0.8.13
+    labels:
+      app: ingress
+    taints:
+      - key: test-key
+        value: test-value
+        effect: NoSchedule
+ignore_docker_version: false
+
+enable_cri_dockerd: true
+ssh_key_path: ~/.ssh/test
+ssh_agent_auth: true
+
+cluster_name: mycluster
+kubernetes_version: v1.10.3-rancher2
+system_images:
+    kubernetes: rancher/hyperkube:v1.10.3-rancher2
+    etcd: rancher/coreos-etcd:v3.1.12
+    alpine: rancher/rke-tools:v0.1.9
+    nginx_proxy: rancher/rke-tools:v0.1.9
+    cert_downloader: rancher/rke-tools:v0.1.9
+    kubernetes_services_sidecar: rancher/rke-tools:v0.1.9
+    kubedns: rancher/k8s-dns-kube-dns-amd64:1.14.8
+    dnsmasq: rancher/k8s-dns-dnsmasq-nanny-amd64:1.14.8
+    kubedns_sidecar: rancher/k8s-dns-sidecar-amd64:1.14.8
+    kubedns_autoscaler: rancher/cluster-proportional-autoscaler-amd64:1.0.0
+    pod_infra_container: rancher/pause-amd64:3.1
+services:
+    etcd:
+      uid: 52034
+      gid: 52034
+    kube-api:
+      service_cluster_ip_range: 10.43.0.0/16
+      service_node_port_range: 30000-32767
+      pod_security_policy: false
+      secrets_encryption_config:
+        enabled: true
+        custom_config:
+          apiVersion: apiserver.config.k8s.io/v1
+          kind: EncryptionConfiguration
+          resources:
+          - resources:
+            - secrets
+            providers:
+            - aescbc:
+                keys:
+                - name: k-fw5hn
+                  secret: RTczRjFDODMwQzAyMDVBREU4NDJBMUZFNDhCNzM5N0I=
+            - identity: {}
+      audit_log:
+        enabled: true
+        configuration:
+          max_age: 6
+          max_backup: 6
+          max_size: 110
+          path: /var/log/kube-audit/audit-log.json
+          format: json
+          policy:
+            apiVersion: audit.k8s.io/v1 
+            kind: Policy
+            omitStages:
+              - "RequestReceived"
+            rules:
+              - level: RequestResponse
+                resources:
+                - group: ""
+                  resources: ["pods"]
+      event_rate_limit:
+        enabled: true
+        configuration:
+          apiVersion: eventratelimit.admission.k8s.io/v1alpha1
+          kind: Configuration
+          limits:
+          - type: Server
+            qps: 6000
+            burst: 30000
+      always_pull_images: false
+      extra_args:
+        audit-log-path: "-"
+        delete-collection-workers: 3
+        v: 4
+    kube-controller:
+      cluster_cidr: 10.42.0.0/16
+      service_cluster_ip_range: 10.43.0.0/16
+      extra_args:
+        v: 4
+        feature-gates: RotateKubeletServerCertificate=true
+        cluster-signing-cert-file: "/etc/kubernetes/ssl/kube-ca.pem"
+        cluster-signing-key-file: "/etc/kubernetes/ssl/kube-ca-key.pem"
+    kubelet:
+      cluster_domain: cluster.local
+      cluster_dns_server: 10.43.0.10
+    fail_swap_on: false
+      pod-infra-container-image: "k8s.gcr.io/pause:3.2"
+      
+      generate_serving_certificate: true
+      extra_args:
+        max-pods: 250
+        feature-gates: RotateKubeletServerCertificate=true
+      extra_binds:
+        - "/usr/libexec/kubernetes/kubelet-plugins:/usr/libexec/kubernetes/kubelet-plugins"
+    scheduler:
+      extra_args:
+        v: 4
+    kubeproxy:
+      extra_args:
+        v: 4
+authentication:
+  strategy: x509
+  sans:
+    - "10.18.160.10"
+    - "my-loadbalancer-1234567890.us-west-2.elb.amazonaws.com"
+
+authorization:
+  mode: rbac
+
+cloud_provider:
+  name: aws
+
+addon_job_timeout: 30
+
+network:
+  plugin: canal
+  mtu: 1400
+  options:
+    canal_iface: eth1
+    canal_flannel_backend_type: vxlan
+    canal_autoscaler_priority_class_name: system-cluster-critical
+    canal_priority_class_name: system-cluster-critical
+  tolerations:
+  - key: "node.kubernetes.io/unreachable"
+    operator: "Exists"
+    effect: "NoExecute"
+    tolerationseconds: 300
+  - key: "node.kubernetes.io/not-ready"
+    operator: "Exists"
+    effect: "NoExecute"
+    tolerationseconds: 300
+  update_strategy:
+    strategy: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 6
+
+dns:
+  provider: coredns
+  update_strategy:
+    strategy: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 20%
+      maxSurge: 15%
+  linear_autoscaler_params:
+    cores_per_replica: 0.34
+    nodes_per_replica: 4
+    prevent_single_point_failure: true
+    min: 2
+    max: 3
+monitoring:
+  provider: metrics-server
+  update_strategy:
+    strategy: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 8
+ingress:
+  provider: nginx
+  node_selector:
+    app: ingress
+  update_strategy:
+    strategy: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 5
+addons: |-
+  ---
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: my-nginx
+    namespace: default
+  spec:
+    containers:
+    - name: my-nginx
+      image: nginx
+      ports:
+      - containerPort: 80
+
+addons_include:
+  - https://raw.githubusercontent.com/rook/rook/master/cluster/examples/kubernetes/rook-operator.yaml
+  - https://raw.githubusercontent.com/rook/rook/master/cluster/examples/kubernetes/rook-cluster.yaml
+  - /path/to/manifest
