@@ -2,6 +2,15 @@
 
 是 Kubernetes 项目的原子调度单位，如果k8s是操作系统，那pod就是虚拟机。
 
+下图是由pod发散的k8s重要 API 对象，比如配置信息 ConfigMap、离线作业 Job、多实例部署 Deployment 等等，它们都分别对应到现实中的各种实际运维需求
+![](./img/pod-map.png)
+
+下面这个是更直观的pod为中心的k8s对象关系图
+
+![](./img/pod-k8s-map.png)
+
+## pod 组成
+
 pod里能运行多个容器，**多个容器共享同一个网络，还可以声明共享同一个volume。**
 
 每个pod都运行一个Pause的基础容器，用作共享网络和挂载卷；其他容器都以业务容器，共享pause容器的网络和挂载。
