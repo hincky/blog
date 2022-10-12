@@ -8,6 +8,8 @@
 |kubectl api-resources|查看k8s资源以及缩写|
 |kubectl create cj echo-cj --image=busybox --schedule="" --dry-run=client -o yaml|生成cronjob模板yaml，要生成其他对象改掉cj即可|
 |kubectl explain pod.spec.containers.env.valueFrom|查看API对象具体细分字段的用法，比如pod这里的valueFrom|
+|kubectl get -o yaml po nginx-ingress-controller-rdvlf -n ingress-nginx > nginx-ingress-controller.yaml|将现有资源反向生成yaml文件|
+|kubectl get -o json po nginx-ingress-controller-rdvlf -n ingress-nginx > nginx-ingress-controller.yaml|将现有资源反向生成json文件|
 
 ## 创建/删除资源
 
@@ -31,6 +33,7 @@
 |kubectl get pods -o wide|查看所有的pod状态|
 |kubectl get pods -n kube-system|通过namespace查询pod|
 |kubectl get pods -l app=kubernetes-nginx|通过label查询pod|
+|kubectl get pods -l 'app in (ngx, nginx, ngx-dep)'|查询label在范围内的pod|
 |kubectl describe pods|查看pod详细信息|
 |kubectl describe pods $POD_NAME|查看具体pod的详细信息|
 |kubectl describe pods |grep Image|查看pod镜像版本号|
