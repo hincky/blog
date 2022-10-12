@@ -291,9 +291,63 @@ apply之后，查看，data数据不会显示明文，只是显示大小信息
 
 #### Env
 
-pod的containers字段里的env，就是环境变量
+pod的containers字段里的env，就是环境变量，pod.spec.containers.env.valueFrom来指定环境变量值的来源：
+- configMapKeyRef
+- secretKeyRef
 
+然后你要再进一步指定应用的 ConfigMap/Secret 的“name”和它里面的“key”，要当心的是这个“name”字段是 API 对象的名字，而不是 Key-Value 的名字。
 
+下面是pod示范
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: env-pod
+
+spec:
+  containers:
+  - env:
+      - name: COUNT 
+        valueFrom:
+          configMapKeyRef:
+            name: info # API对象
+            key: count # kv的key名
+      - name: GREETING # kv的key名
+        valueFrom:
+          configMapKeyRef:
+            name: info # API对象
+            key: greeting # kv的key名
+      - name: USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: user # API对象
+            key: name # kv的key名
+      - name: PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: user # API对象
+            key: pwd # kv的key名
+
+    image: busybox
+    name: busy
+    imagePullPolicy: IfNotPresent
+    command: ["/bin/sleep", "300"]
+```
+
+![](./img/valueForm.png)
+
+apply之后，exec进入pod，通过echo查看配置是否注入成功
+
+```bash
+kubectl apply -f env-pod.yml
+kubectl exec -it env-pod -- sh
+
+echo $COUNT
+echo $GREETING
+echo $USERNAME $PASSWORD
+```
+![](./img/valueForm-get-pod.png)
 
 #### Volume
 
