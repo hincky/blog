@@ -7,6 +7,7 @@
 |:---|:---|
 |kubectl api-resources|查看k8s资源以及缩写|
 |kubectl create cj echo-cj --image=busybox --schedule="" --dry-run=client -o yaml|生成cronjob模板yaml，要生成其他对象改掉cj即可|
+|kubectl explain pod.spec.containers.env.valueFrom|查看API对象具体细分字段的用法，比如pod这里的valueFrom|
 
 ## 创建/删除资源
 
@@ -22,15 +23,6 @@
 |kubectl version|查看集群版本信息|
 |kubectl cluster-info|查看集群详细信息|
 |kubectl get node|查看集群中的所有Node|
-
-## deployment
-|命令|说明|
-|:---|:---|
-|kubectl get deploy/deployment|查看所有deployments|
-|kubectl describe deployment|查看deployment详细信息|
-|kubectl scale deployments/kubernetes-nginx --replicas=4|通过deployment对应用数量缩放到4个副本|
-|kubectl set image deployments/kubernetes-nginx nginx=nginx:1.19|滚动更新pod镜像版本|
-|kubectl rollout undo deployments/kubernetes-nginx|回滚到原来的pod镜像版本|
 
 ## pod
 |命令|说明|
@@ -48,6 +40,15 @@
 |kubectl exec -ti $POD_NAME -- bash|使用exec和env命令查看pod容器环境变量|
 |kubectl label pod $POD_NAME version=v1|给pod添加label|
 
+## deployment
+|命令|说明|
+|:---|:---|
+|kubectl get deploy/deployment|查看所有deployments|
+|kubectl describe deployment|查看deployment详细信息|
+|kubectl scale deployments/kubernetes-nginx --replicas=4|通过deployment对应用数量缩放到4个副本|
+|kubectl set image deployments/kubernetes-nginx nginx=nginx:1.19|滚动更新pod镜像版本|
+|kubectl rollout undo deployments/kubernetes-nginx|回滚到原来的pod镜像版本|
+
 ## service
 |命令|说明|
 |:---|:---|
@@ -62,28 +63,18 @@
 |命令|说明|
 |:---|:---|
 |kubectl proxy|通过代理来暴露接口以供访问|
-|kubectl ||
 
 ## namespace
 |命令|说明|
 |:---|:---|
 |kubectl get ns|列出所有命名空间|
-|kubectl ||
 
 ## replication controller
 |命令|说明|
 |:---|:---|
 |kubectl get||
-|kubectl ||
 
 ## replica set
 |命令|说明|
 |:---|:---|
 |kubectl get rs|获取所有rs|
-|kubectl ||
-
-## log
-|命令|说明|
-|:---|:---|
-|kubectl logs $POD_NAME|查看Pod打印的日志|
-|kubectl ||

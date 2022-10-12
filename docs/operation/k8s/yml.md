@@ -206,7 +206,96 @@ apply运行之后，使用 `kubectl get cj、kubectl get pod` 来查看状态：
 
 ## ConfigMap/Secret
 
+### ConfigMap
 
+k8s中专门管理配置信息的对象：
+- ConfigMap 保存明文配置
+- Secret 保存秘密配置
+
+因为 ConfigMap 存储的是配置数据，是静态的字符串，并不是容器，所以它们就不需要用“spec”字段来说明运行时的“规格”。
+
+生成带有“data”字段的 YAML 样板，你需要在 kubectl create 后面多加一个参数 --from-literal ，表示从字面值生成一些数据
+
+因为在 ConfigMap 里的数据都是 Key-Value 结构，所以 --from-literal 参数需要使用 k=v 的形式。
+```bash
+export out="--dry-run=client -o yaml"
+kubectl create cm info --from-literal=k=v $out
+```
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: info
+
+data:
+  count: '10'
+  debug: 'on'
+  path: '/etc/systemd'
+  greeting: |
+    say hello to kubernetes.
+```
+
+apply运行之后，`kubectl get cm`，`kubectl describe cm info`查看
+
+![](./img/get-configmap.png)
+
+### Secret
+
+创建 YAML 样板的命令是 kubectl create secret generic ，同样，也要使用参数 --from-literal 给出 Key-Value 值：
+
+```bash
+export out="--dry-run=client -o yaml"
+kubectl create secret generic user --from-literal=name=root $out
+```
+
+```yml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: user
+
+data:
+  name: cm9vdA==
+```
+
+看不到name的明文值，是因为做了 Base64 编码，linux本身可以通过下面这样进行 Base64 编码：
+
+```bash
+echo -n "123456" | base64
+MTIzNDU2
+```
+
+然后就能自己添加数据
+
+```yml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: user
+
+data:
+  name: cm9vdA==  # root
+  pwd: MTIzNDU2   # 123456
+  db: bXlzcWw=    # mysql
+```
+
+apply之后，查看，data数据不会显示明文，只是显示大小信息
+
+![](./img/get-secret.png)
+
+### 如何使用/注入配置信息对象
+
+两种方法：
+- Env 环境变量
+- Volume 加载文件
+
+#### Env
+
+pod的containers字段里的env，就是环境变量
+
+
+
+#### Volume
 
 
 ## deployment
