@@ -6,7 +6,7 @@
 |命令|说明|
 |:---|:---|
 |kubectl api-resources|查看k8s资源以及缩写|
-|kubectl create cj echo-cj --image=busybox --schedule="" --dry-run=client -o yaml|生成cronjob模板yaml，要生成其他对象改掉cj即可|
+|kubectl create cj echo-cj --image=busybox --schedule="" --dry-run=client -o yaml > filename.yaml|生成cronjob模板yaml，要生成其他对象改掉cj即可|
 |kubectl explain pod.spec.containers.env.valueFrom|查看API对象具体细分字段的用法，比如pod这里的valueFrom|
 |kubectl get -o yaml po nginx-ingress-controller-rdvlf -n ingress-nginx > nginx-ingress-controller.yaml|将现有资源反向生成yaml文件|
 |kubectl get -o json po nginx-ingress-controller-rdvlf -n ingress-nginx > nginx-ingress-controller.yaml|将现有资源反向生成json文件|
