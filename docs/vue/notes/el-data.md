@@ -1,8 +1,14 @@
 # el 的两种写法
 1. el:'#root'
-2. v.$mount()
+2. 先创建Vue实例，再通过v.$mount('#root')指定el的值 
 ```js
+const v = new Vue({
+    data:{
+        name:'hello world'
+    }
+})
 
+v.$mount('#root')
 ```
 
 # data的两种写法
@@ -45,4 +51,4 @@ data函数里面：
 1. this 是指Vue实例对象
 2. data:()=>{} `=>`是指全局window
 
-
+> 由Vue管理的函数，一定不要写箭头函数，否则this不再是Vue实例，变成全局window了
