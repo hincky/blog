@@ -11,6 +11,7 @@
 |step out|从方法内部跳出，并到下一行代码|
 |run to cursor|直接跳到鼠标点击的代码行|
 |trace current stream chain|追踪当前流的调用链|
+|alt+shift+鼠标选择多行|多行编辑|
 
 
 ## 行断点
