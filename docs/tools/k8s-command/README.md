@@ -36,7 +36,7 @@
 |kubectl get pods -l 'app in (ngx, nginx, ngx-dep)'|查询label在范围内的pod|
 |kubectl describe pods|查看pod详细信息|
 |kubectl describe pods $POD_NAME|查看具体pod的详细信息|
-|kubectl describe pods |grep Image|查看pod镜像版本号|
+|`kubectl describe pods | grep Image`|查看pod镜像版本号|
 |export POD_NAME=kubernetes-nginx-78bcc44665-8fnnn|将Pod的名称设置为环境变量，方便以$POD_NAME使用|
 |kubectl logs $POD_NAME|查看Pod打印的日志|
 |kubectl exec $POD_NAME -- env|使用exec和env命令查看pod容器环境变量|
