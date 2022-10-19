@@ -23,4 +23,4 @@ FROM > WHERE > GROUP BY > HAVING > SELECT的字段 > DISTINCT > ORDER BY > LIMIT
 提升查询效率的方法
 - 限定返回结果的数量 limit
 - 设置过滤条件 where having
-
+- 避免全表扫描
