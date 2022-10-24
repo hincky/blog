@@ -45,6 +45,7 @@ module.exports = {
         { text: '查询', link: '/database/sql/2-select' },
         { text: '查询条件', link: '/database/sql/3-where' },
         { text: '函数', link: '/database/sql/4-function' },
+        { text: '子查询', link: '/database/sql/5-select' },
         ]
       },
       { text: '数据库相关',

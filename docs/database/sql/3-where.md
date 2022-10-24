@@ -37,4 +37,17 @@ AND和OR同时存在时，AND会优先执行，再到OR；如果要区别好优�
 
 也就是说**like后面不用通配符**，并且**对字段进行索引**的时候才不会对全表进行扫描。
 
+## 分组
+
+|分组|作用|sql例句|
+|:---:|:---:|:---:|
+|GROUP BY|按照不同的数值进行分组|SELECT COUNT(*), role_main FROM heros **GROUP BY** role_main|
+|HAVING|对分组进行条件过滤|SELECT COUNT(*) as num, role_main, role_assist FROM heros GROUP BY role_main, role_assist **HAVING num > 5** ORDER BY num DESC|
+
+> where 和 having 的区别
+
+WHERE 是用于数据行，而 HAVING 则作用于分组
+
+
+
 
