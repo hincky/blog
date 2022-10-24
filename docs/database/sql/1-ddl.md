@@ -5,6 +5,8 @@
 ddl就是对**数据库**和**数据表**进行定义的语言
 增删改create drop alter
 
+> 最好有个说明文档，说清楚每个字段的定义
+
 ### 对库定义
 ```sql
 CREATE DATABASE nba; ---创建一个名为nba的数据库
