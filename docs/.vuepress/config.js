@@ -42,9 +42,9 @@ module.exports = {
         items: [
         { text: '快查', link: '/database/sql/quick' },
         { text: 'ddl', link: '/database/sql/1-ddl' },
-        { text: 'select', link: '/database/sql/2-select' },
-        { text: 'where', link: '/database/sql/3-where' },
-        { text: 'function', link: '/database/sql/4-function' },
+        { text: '查询', link: '/database/sql/2-select' },
+        { text: '查询条件', link: '/database/sql/3-where' },
+        { text: '函数', link: '/database/sql/4-function' },
         ]
       },
       { text: '数据库相关',

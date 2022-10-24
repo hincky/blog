@@ -9,6 +9,7 @@
 |>=|SELECT name, hp_max FROM heros WHERE hp_max **>=** 6000|
 |between|SELECT name, hp_max FROM heros WHERE hp_max **BETWEEN** 5399 **AND** 6811|
 |is null|SELECT name, hp_max FROM heros WHERE hp_max **IS NULL**|
+|is not null|SELECT name, hp_max FROM heros WHERE hp_max **IS NOT NULL**|
 
 ## 逻辑运算符
 |逻辑运算符|sql例句|
