@@ -18,7 +18,7 @@ SELECT player_name, height, team_id FROM player AS a WHERE height > (SELECT avg(
 EXISTS 子查询用来判断条件是否满足，满足的话为 True，不满足为 False。
 
 ```sql
-SELECT player_id, team_id, player_name FROM player WHERE `EXISTS` (SELECT player_id FROM player_score WHERE player.player_id = player_score.player_id)
+SELECT player_id, team_id, player_name FROM player WHERE EXISTS (SELECT player_id FROM player_score WHERE player.player_id = player_score.player_id)
 ```
 
 ## 非关联子查询
