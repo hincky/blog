@@ -15,7 +15,7 @@ module.exports = {
     // 添加导航栏
     nav: [
       // { text: '博客主页', link: '/' },
-      { text: '技术分享', link: '/share/' },
+      // { text: '技术分享', link: '/share/' },
       // { text: '算法', link: '/algorithm/' },
       // { text: 'vue',
       //   items: [
@@ -25,6 +25,13 @@ module.exports = {
       //   { text: 'geek', link: '/vue/geek/base' },
       //   ]
       // },
+      { text: 'mybatis',
+        items: [
+        { text: '基础用法', link: '/mybatis/basic/' },
+        { text: '分页', link: '/mybatis/pagehelper/' },
+        { text: '代码生成', link: '/mybatis/generator/' },
+        ]
+      },
       { text: 'spring',
         items: [
         { text: 'spring核心框架', link: '/spring/spring-framework/' },
