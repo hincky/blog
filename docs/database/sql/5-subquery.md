@@ -63,8 +63,11 @@ SELECT * FROM A WHERE EXIST (SELECT cc FROM B WHERE B.cc=A.cc)
 
 如果**表 A 比表 B 小**，那么使用 `EXISTS` 子查询效率会更高，因为我们可以使用到 A 表中对 cc 列的索引，而不用从 B 中进行 cc 列的查询。
 
+> 总结
 
-
+1. 都是对较小的表进行索引，提高查询效率；
+2. 小表在后（内层），用 `IN`
+3. 小表在前（外层），用 `EXISTS`
 
 
 
