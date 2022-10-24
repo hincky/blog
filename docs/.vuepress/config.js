@@ -14,41 +14,49 @@ module.exports = {
     logo: '/assets/img/earth-logo-removebg.png',
     // 添加导航栏
     nav: [
-      { text: '博客主页', link: '/' },
+      // { text: '博客主页', link: '/' },
       { text: '技术分享', link: '/share/' },
-      { text: '算法', link: '/algorithm/' },
-      { text: 'vue',
-        items: [
-        { text: 'vue', link: '/vue/-/introduction' },
-        { text: 'vue-router', link: '/vue/router/' },
-        { text: 'vue-admin', link: '/vue/admin/' },
-        { text: 'geek', link: '/vue/geek/base' },
-        ]
-      },
+      // { text: '算法', link: '/algorithm/' },
+      // { text: 'vue',
+      //   items: [
+      //   { text: 'vue', link: '/vue/-/introduction' },
+      //   { text: 'vue-router', link: '/vue/router/' },
+      //   { text: 'vue-admin', link: '/vue/admin/' },
+      //   { text: 'geek', link: '/vue/geek/base' },
+      //   ]
+      // },
       { text: 'spring',
         items: [
         { text: 'spring核心框架', link: '/spring/spring-framework/' },
         { text: 'Spring Boot', link: '/spring/springboot/' },
         ]
       },
+      { text: 'sql',
+        items: [
+        { text: '快查', link: '/database/sql/quick' },
+        { text: 'ddl', link: '/database/sql/1-ddl' },
+        { text: 'select', link: '/database/sql/2-select' },
+        { text: 'where', link: '/database/sql/3-where' },
+        ]
+      },
       { text: '数据库相关',
         items: [
-        { text: 'sql', link: '/database/sql/' },
+        // { text: 'sql', link: '/database/sql/' },
         { text: 'mysql', link: '/database/mysql/' },
         { text: 'redis', link: '/database/redis/' },
         { text: 'mongo', link: '/database/mongo/' },
         ]
       },
-      { text: '运维',
-        items: [
-        { text: 'k8s', link: '/operation/k8s/' },
-        { text: 'docker', link: '/operation/docker/' },
-        { text: 'helm', link: '/operation/helm/' },
-        { text: 'prometheus', link: '/operation/prometheus/' },
-        { text: 'grafana', link: '/operation/grafana/' },
-        { text: 'nginx', link: '/operation/nginx/nic' },
-        ]
-      },
+      // { text: '运维',
+      //   items: [
+      //   { text: 'k8s', link: '/operation/k8s/' },
+      //   { text: 'docker', link: '/operation/docker/' },
+      //   { text: 'helm', link: '/operation/helm/' },
+      //   { text: 'prometheus', link: '/operation/prometheus/' },
+      //   { text: 'grafana', link: '/operation/grafana/' },
+      //   { text: 'nginx', link: '/operation/nginx/nic' },
+      //   ]
+      // },
       { text: '协议',
         items: [
         { text: 'http', link: '/protocol/http/' },
