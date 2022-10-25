@@ -69,8 +69,11 @@ SELECT * FROM A WHERE EXIST (SELECT cc FROM B WHERE B.cc=A.cc)
 2. 小表在后（内层），用 `IN`
 3. 小表在前（外层），用 `EXISTS`
 
+IN表是外边和内表进行hash连接，是先执行子查询。
+EXISTS是对外表进行循环，然后在内表进行查询。
+因此如果外表数据量大，则用IN，如果外表数据量小，也用EXISTS。
 
+### NOT IN 和 NOT EXISTS 如何选择
 
-
-
+IN有一个缺陷是不能判断NULL，因此如果字段存在NULL值，则会出现返回，所以最好使用NOT EXISTS。
 
