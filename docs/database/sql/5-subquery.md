@@ -77,3 +77,14 @@ EXISTS是对外表进行循环，然后在内表进行查询。
 
 IN有一个缺陷是不能判断NULL，因此如果字段存在NULL值，则会出现返回，所以最好使用NOT EXISTS。
 
+## 子查询作为计算字段
+
+比如想查询每个球队的球员数
+
+```sql
+SELECT team_name, (SELECT count(*) FROM player WHERE player.team_id = team.team_id) AS player_num FROM team
+```
+
+将子查询SELECT count(*) FROM player WHERE player.team_id = team.team_id作为了计算字段
+
+通常我们需要给这个计算字段起一个别名，这里我用的是 player_num，因为子查询的语句比较长，使用别名更容易理解。
