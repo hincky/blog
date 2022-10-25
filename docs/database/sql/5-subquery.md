@@ -48,7 +48,7 @@ SELECT player_name, height FROM player WHERE height = (SELECT max(height) FROM p
 |ALL|与子查询返回的所有值比较|SELECT player_id, player_name, height FROM player WHERE height > ALL (SELECT height FROM player WHERE team_id = 1002)|
 |SOME|与ANY作用相同，一般用ANY||
 
-### **`IN`** 和 **`EXISTS`** 如何选择
+### IN 和 EXISTS 如何选择
 
 ```sql
 SELECT * FROM A WHERE cc IN (SELECT cc FROM B)
