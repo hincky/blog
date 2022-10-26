@@ -34,7 +34,7 @@ var app = new Vue({
 2. 注册组件：
     局部注册：Vue实例中`components`属性添加组件k-v
     全局注册：Vue.component('组件标签名',组件名)
-3. 使用组件：在模板中添加组件名称的html标签
+3. 使用组件（在dom里面添加组件标签）：在模板中添加组件名称的html标签
 
 ```html
 <body>
@@ -103,10 +103,10 @@ const c = Vue.extend({
     }
 })
 
-//注册组件（这是全局注册）没有s，会给每个vm都加上这个hello组件
+//注册组件（这是全局注册）component没有s，代表会给每个vm实例都加上这个hello组件
 Vue.component('hello',c)
 
-//注册组件（这是局部注册）有s
+//注册组件（这是局部注册）components有s，代表哪个实例要有什么组件就自己去引入：比如这里就引入了school组件a和student组件b
 new Vue({
     el: '#app',  //这里表示这个vm绑定id为app的dom
     components:{
@@ -131,3 +131,36 @@ vue.component的缺点
 - template模板不能代码高亮
 - 不支持css
 - 没有构建步骤
+
+
+
+## 组件嵌套
+
+```js
+//定义组件
+const school = Vue.extend({
+    name: 'hope school',
+    template: `
+        <div>
+            <h2>学生名称：{{studentName}}</h2>
+            <h2>学生名称：{{age}}</h2>
+        </div>
+    `,
+    data(){
+        return {
+            studentName: 'hincky',
+            address : 'guangzhou',
+        }
+    }
+})
+
+//创建vm，并注册组件
+new Vue({
+    el: '#app',  //这里表示这个vm绑定id为app的dom
+    //注册组件（局部）
+    components:{
+        school:school  /// 效果等于school
+        student:b
+    }
+})
+```
