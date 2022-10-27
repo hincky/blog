@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/pro-vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <school></school>
+        <hr>
+    </div>
+</body>
+<script type="text/javascript">
+    //第一步：定义组件
+    const school = Vue.extend({
+        template:`
+            <div>
+                <h2>学校名字：{{schoolName}}</h2>
+                <h2>学校地址：{{schoolAddress}}</h2>
+            </div>
+        `,
+        data(){
+            return {
+                schoolName:'SCUT',
+                address:'guangzhou'
+            }
+        }
+    })
+    //第二步：注册组件，局部注册
+    const vm = new Vue({
+        el: '#app',
+        components:{
+            school
+        }
+    })
+</script>
+</html>
