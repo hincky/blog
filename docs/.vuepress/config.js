@@ -84,7 +84,25 @@ module.exports = {
       { text: '留言板', link: '/board/' },
     ],
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
-    sidebar: 'auto',
+    // sidebar: 'auto',
+    sidebar:  {
+      '/foo/': [
+        '',     /* /foo/ */
+        'one',  /* /foo/one.html */
+        'two'   /* /foo/two.html */
+      ],
+      '/bar/': [
+        '',      /* /bar/ */
+        'three', /* /bar/three.html */
+        'four'   /* /bar/four.html */
+      ],
+      // fallback
+      '/': [
+        '',        /* / */
+        'contact', /* /contact.html */
+        'about'    /* /about.html */
+      ]
+    },
     sidebarDepth: 3,
     lastUpdated: 'Last Updated'
   },
