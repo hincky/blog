@@ -66,5 +66,16 @@ const componentName = Vue.extend({
 </script>
 ```
 
+## 单文件组件
+
+xxx.vue文件，作为单文件组件囊括模板，脚本（数据交互），样式。
+里面包含三个核心部分（标签）：
+- template
+- script
+- style
+
+创建了几个.vue文件之后，创建一个App.vue作为所有组件的统一管理入口
+
+
 
 
