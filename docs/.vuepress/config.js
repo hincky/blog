@@ -85,7 +85,7 @@ module.exports = {
     ],
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     sidebar: 'auto',
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     lastUpdated: 'Last Updated'
   },
   configureWebpack: {
