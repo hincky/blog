@@ -3,28 +3,27 @@ module.exports = {
   // port: '8080',
   title: 'hincky的博客',
   description: 'hincky的个人技术博客,用于记录后端技术相关的文档、笔记。不定期更新,随缘更新,有缘关注。',
-  base: '/',
-  dest: '.vuepress/dist',  // 设置输出目录
-  repo:  'https://github.com/hincky/vuepress',
+  // base: '/',
+  // dest: '.vuepress/dist',  // 设置输出目录
+  // repo:  'https://github.com/hincky/vuepress', //导航栏右侧生成GitHub链接
   head: [
     ['link', { rel: 'icon', href: '/assets/img/h-icon.jpg' }]
   ],
-  plugins: [],
   themeConfig: {
-    logo: '/assets/img/earth-logo-removebg.png',
     // 添加导航栏
     nav: [
       // { text: '博客主页', link: '/' },
-      // { text: '技术分享', link: '/share/' },
+      { text: '技术分享', link: '/share/' },
       // { text: '算法', link: '/algorithm/' },
-      // { text: 'vue',
-      //   items: [
-      //   { text: 'vue', link: '/vue/-/introduction' },
-      //   { text: 'vue-router', link: '/vue/router/' },
-      //   { text: 'vue-admin', link: '/vue/admin/' },
-      //   { text: 'geek', link: '/vue/geek/base' },
-      //   ]
-      // },
+      { text: 'vue',
+        items: [
+        { text: 'vue', link: '/vue/-/introduction' },
+        { text: 'vue-router', link: '/vue/router/' },
+        { text: 'vue-admin', link: '/vue/admin/' },
+        { text: 'geek', link: '/vue/geek/' },
+        { text: 'notes', link: '/vue/notes/component/1-non-single-file' },
+        ]
+      },
       { text: 'mybatis',
         items: [
         { text: '基础用法', link: '/mybatis/basic/' },
@@ -83,35 +82,48 @@ module.exports = {
       },
       { text: '留言板', link: '/board/' },
     ],
+    logo: '/assets/img/earth-logo-removebg.png', //导航栏logo
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
+    // lastUpdated: 'Last Updated'
+    docsDir: 'docs', // 编辑的文件夹
+    editLinks: true, // 启用编辑
+    editLinkText: '编辑',
+    sidebarDepth: 2, //侧边栏显示深度，默认1，最大2（显示到h3标题）
     // sidebar: 'auto',
-    sidebar:  {
-      '/foo/': [
-        '',     /* /foo/ */
-        'one',  /* /foo/one.html */
-        'two'   /* /foo/two.html */
-      ],
-      '/bar/': [
-        '',      /* /bar/ */
-        'three', /* /bar/three.html */
-        'four'   /* /bar/four.html */
-      ],
-      // fallback
-      '/': [
-        '',        /* / */
-        'contact', /* /contact.html */
-        'about'    /* /about.html */
-      ]
-    },
-    sidebarDepth: 3,
-    lastUpdated: 'Last Updated'
-  },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@alias': 'path/to/some/dir'
+    sidebar: [
+      {
+          title: 'spring',
+          path: '/spring/spring-framework/',
+          collapsable: true, // 不折叠
+          children: [
+              { title: "nacos", path: "/spring/nacos/nacos" }
+          ]
+      },
+      {
+        title: "技术分享",
+        path: '/share/',
+        collapsable: true, // 不折叠
+        children: [
+          { title: "jenkins", path: "/share/jenkins" },
+          { title: "oauth2", path: "/share/oauth2" },
+          { title: "cicd", path: "/share/auto-cicd" },
+          { title: "postman", path: "/share/postman" },
+          { title: "操作git总是超时怎么办", path: "/share/gitpush-overtime" },
+          { title: "idea断点调试技巧", path: "/share/idea-debug" }
+        ],
+      },
+      {
+        title: "vue",
+        path: '/vue/-/introduction',
+        collapsable: true, // 不折叠
+        children: [
+          { title: "vue实例", path: "/vue/-/vue-instance" },
+        ],
       }
-    }
-  }
+    ]
+    
+  },
+
+  // plugins: [],
 }
 
