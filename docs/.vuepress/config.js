@@ -6,8 +6,8 @@ module.exports = {
     // 下面这一行是对移动端优化
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
-  base: '/docs/', //github发布的访问路径
-  theme: 'reco', //配置主题为reco
+  base: '/blog/', //github发布的访问路径，本地开发的时候不要打开,只有在build时候再打开
+  // theme: 'reco', //配置主题为reco
   // theme: '@vuepress/blog', //主题配置为博客类型
   themeConfig: {
     logo: '/assets/img/earth-logo-removebg.png', //导航栏logo
@@ -23,7 +23,7 @@ module.exports = {
     // cyberSecurityLink: '公安部备案指向链接', //公安部备案指向链接;配合reco主题使用
     startYear: '2022', // 项目开始时间，只填写年份;配合reco主题使用
     author: 'hincky', //作者姓名，配合reco主题使用
-    authorAvatar: '/assets/img/avatar.png',//作者头像，配合reco主题使用
+    authorAvatar: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/hincky-avatar.png',//作者头像，配合reco主题使用
     sidebarDepth: 2, //侧边栏显示深度，默认1，最大2（显示到h3标题）
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     // sidebar: 'auto',
@@ -36,12 +36,21 @@ module.exports = {
         {
           title: '原理',
           collapsable: true,
-          children: ['oauth2','1-template-grammar','2-data-mount','3-el-data','4-mvvm']
-        },
+          children: ['1-template-grammar','2-data-mount','3-el-data']
+        }
+      ],
+      '/oauth2/action/': [
         {
           title: '应用',
           collapsable: true,
           children: ['1-non-single-file','2-single-file']
+        }
+      ],
+      '/database/sql/': [
+        {
+          title: 'SQL',
+          collapsable: true,
+          children: ['1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query','quick']
         }
       ],          
       // '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用
@@ -61,12 +70,33 @@ module.exports = {
       //     { text: '英语', link: '/en/' }
       //   ]
       // }
+      // {
+      //   text: '前端',
+      //   items: [
+      //     { text: 'vue', link: '/oauth2/' },
+      //   ]
+      // },
+      // {
+      //   text: '后端',
+      //   items: [
+      //     { text: '原理', link: '/oauth2/' },
+      //     { text: '应用', link: '/oauth2/action/' }
+      //   ]
+      // },
       {
-        text: 'oauth2',link: '/oauth2/'
-        // items: [
-        //   { text: '原理', link: '/oauth2/' },
-        //   { text: '应用', link: '/oauth2/action/' }
-        // ]
+        text: '数据库',
+        items: [
+          { text: 'sql', link: '/database/sql/' },
+          { text: 'mysql', link: '/oauth2/' },
+          { text: 'redis', link: '/oauth2/action/' }
+        ]
+      },
+      {
+        text: 'oauth2',
+        items: [
+          { text: '原理', link: '/oauth2/' },
+          { text: '应用', link: '/oauth2/action/' },
+        ]
       }
     ],
     blogConfig: { //博客设置
