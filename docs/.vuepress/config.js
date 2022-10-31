@@ -6,7 +6,7 @@ module.exports = {
     // 下面这一行是对移动端优化
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
-  // base: '/blog/', //github发布的访问路径，本地开发的时候不要打开,只有在build时候再打开
+  base: '/blog/', //github发布的访问路径，本地开发的时候不要打开,只有在build时候再打开
   // theme: 'reco', //配置主题为reco
   // theme: '@vuepress/blog', //主题配置为博客类型
   themeConfig: {
@@ -50,14 +50,14 @@ module.exports = {
         {
           title: 'SQL',
           collapsable: true,
-          children: ['1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query','quick']
+          children: ['quick','1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query']
         }
       ],
       '/spring/': [
         {
           title: 'Spring',
           collapsable: true,
-          children: ['1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query','quick']
+          children: ['ioc','aop']
         }
       ],         
       // '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用
@@ -78,7 +78,7 @@ module.exports = {
         text: '后端',
         items: [
           { text: 'spring', link: '/spring/' },
-          { text: '应用', link: '/oauth2/action/' }
+          // { text: '应用', link: '/oauth2/action/' }
         ]
       },
       {
