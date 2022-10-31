@@ -87,8 +87,8 @@ module.exports = {
         text: '数据库',
         items: [
           { text: 'sql', link: '/database/sql/' },
-          { text: 'mysql', link: '/oauth2/' },
-          { text: 'redis', link: '/oauth2/action/' }
+          // { text: 'mysql', link: '/oauth2/' },
+          // { text: 'redis', link: '/oauth2/action/' }
         ]
       },
       {
@@ -97,7 +97,16 @@ module.exports = {
           { text: '原理', link: '/oauth2/' },
           { text: '应用', link: '/oauth2/action/' },
         ]
-      }
+      },
+      { text: '小工具合集',
+        items: [
+        { text: 'linux命令', link: 'https://hincky.github.com/blog/tools/linux-command/index.html' },
+        { text: 'docker命令', link: '/tools/docker-command/' },
+        { text: 'kubectl命令', link: '/tools/k8s-command/' },
+        // { text: 'crictl命令', link: '/tools/cri-command/' },
+        { text: 'git命令', link: '/tools/git-command/git' },
+        ]
+      },
     ],
     blogConfig: { //博客设置
       category: {
