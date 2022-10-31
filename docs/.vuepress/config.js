@@ -6,7 +6,7 @@ module.exports = {
     // 下面这一行是对移动端优化
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
-  base: '/blog/', //github发布的访问路径，本地开发的时候不要打开,只有在build时候再打开
+  // base: '/blog/', //github发布的访问路径，本地开发的时候不要打开,只有在build时候再打开
   // theme: 'reco', //配置主题为reco
   // theme: '@vuepress/blog', //主题配置为博客类型
   themeConfig: {
@@ -52,7 +52,14 @@ module.exports = {
           collapsable: true,
           children: ['1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query','quick']
         }
-      ],          
+      ],
+      '/spring/': [
+        {
+          title: 'Spring',
+          collapsable: true,
+          children: ['1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query','quick']
+        }
+      ],         
       // '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用
     },
     nav: [
@@ -61,28 +68,19 @@ module.exports = {
       // { text: '分类', link: '/categories/' },
       // { text: '归档', link: '/archives/' },
       // { text: '友链', link: '/links/' },
-      // { text: '关于', link: '/about/' },
-      // { text: '域名', link: '/domains/' },
-      // {
-      //   text: '语言',
-      //   items: [
-      //     { text: '中文', link: '/cn/' },
-      //     { text: '英语', link: '/en/' }
-      //   ]
-      // }
       // {
       //   text: '前端',
       //   items: [
       //     { text: 'vue', link: '/oauth2/' },
       //   ]
       // },
-      // {
-      //   text: '后端',
-      //   items: [
-      //     { text: '原理', link: '/oauth2/' },
-      //     { text: '应用', link: '/oauth2/action/' }
-      //   ]
-      // },
+      {
+        text: '后端',
+        items: [
+          { text: 'spring', link: '/spring/' },
+          { text: '应用', link: '/oauth2/action/' }
+        ]
+      },
       {
         text: '数据库',
         items: [
@@ -100,10 +98,8 @@ module.exports = {
       },
       { text: '小工具合集',
         items: [
-        { text: 'linux命令', link: 'https://hincky.github.com/blog/tools/linux-command/index.html' },
         { text: 'docker命令', link: '/tools/docker-command/' },
         { text: 'kubectl命令', link: '/tools/k8s-command/' },
-        // { text: 'crictl命令', link: '/tools/cri-command/' },
         { text: 'git命令', link: '/tools/git-command/git' },
         ]
       },
@@ -118,13 +114,6 @@ module.exports = {
         text: 'Tag'      // 默认文案 “标签”
       }
     }
-  },
-  plugins: [
-    // '@vuepress/pwa',
-    // {
-    //   serviceWorker: true,
-    //   updatePopup: true
-    // }
-  ],
+  }
 }
 
