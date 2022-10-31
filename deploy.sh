@@ -10,11 +10,17 @@ npm run docs:build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+echo 'opened dist'
+
 git init
 git add -A
 git commit -m 'deploy'
 
+echo 'git committed'
+
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/hincky/blog.git master:gh-pages
+git push -f git@github.com:hincky/blog.git master:gh-pages
+
+echo 'git pushed'
 
 cd -
