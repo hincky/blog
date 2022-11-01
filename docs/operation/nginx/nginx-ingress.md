@@ -2,11 +2,14 @@
 title: nginx-ingress
 date: 2022-10-29 11:41:05
 permalink: /pages/72044b/
-categories:
+categories: 
   - operation
   - nginx
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 ## nginx ingress version
 

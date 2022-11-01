@@ -2,10 +2,13 @@
 title: theme-config
 date: 2022-09-29 17:26:33
 permalink: /pages/581e8c/
-categories:
+categories: 
   - guide
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 主题的配置
 和插件几乎一样，主题的配置文件 themeEntry 应该导出一个普通的 `JavaScript` 对象（`#1`），它也可以是一个返回对象的函数（`#2`），这个函数接受用户在 `siteConfig.themeConfig` 为第一个参数、包含编译期上下文的 `ctx` 对象作为第二个参数。

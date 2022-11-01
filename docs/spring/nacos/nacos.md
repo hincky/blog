@@ -2,11 +2,14 @@
 title: nacos
 date: 2022-10-29 11:41:05
 permalink: /pages/53a6f6/
-categories:
+categories: 
   - spring
   - nacos
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # Nacos
 

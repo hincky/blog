@@ -2,11 +2,14 @@
 title: README
 date: 2022-10-12 20:26:01
 permalink: /pages/ade9fa/
-categories:
+categories: 
   - operation
   - istio
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # istio
 

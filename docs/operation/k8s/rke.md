@@ -2,11 +2,14 @@
 title: rke
 date: 2022-10-12 20:26:02
 permalink: /pages/ee79cb/
-categories:
+categories: 
   - operation
   - k8s
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # rke install kubernetes
 没有特殊标明，就是所有主机都要进行操作

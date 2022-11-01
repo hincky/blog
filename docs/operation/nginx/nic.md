@@ -2,11 +2,14 @@
 title: nic
 date: 2022-10-12 20:26:02
 permalink: /pages/9b7407/
-categories:
+categories: 
   - operation
   - nginx
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 安装nginx ingress controller
 

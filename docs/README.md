@@ -25,11 +25,3 @@ features:
 
 ![img](./.vuepress/public/assets/img/hincky-ERcode-28KB.jpg)
 
-
-
-
-
-
-::: slot footer
-[粤ICP备2022120427号](https://beian.miit.gov.cn/)|Copyright © 2022 [Hincky](https://github.com/hincky) 
-:::

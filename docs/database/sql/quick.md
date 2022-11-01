@@ -2,11 +2,14 @@
 title: quick
 date: 2022-10-29 11:41:05
 permalink: /pages/1f3cb0/
-categories:
+categories: 
   - database
   - sql
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # sql快查
 

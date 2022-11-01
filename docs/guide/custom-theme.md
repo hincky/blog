@@ -2,10 +2,13 @@
 title: custom-theme
 date: 2022-09-30 08:10:01
 permalink: /pages/bfa872/
-categories:
+categories: 
   - guide
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 怎么自定义自己的vuepress主题
 

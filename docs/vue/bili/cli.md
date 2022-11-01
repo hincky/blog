@@ -2,11 +2,14 @@
 title: cli
 date: 2022-10-29 11:41:05
 permalink: /pages/781222/
-categories:
+categories: 
   - vue
   - bili
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # vue cli脚手架
 

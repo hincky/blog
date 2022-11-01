@@ -2,10 +2,13 @@
 title: oauth2
 date: 2022-10-30 09:47:57
 permalink: /pages/f85137/
-categories:
+categories: 
   - oauth2
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # oAuth2
 

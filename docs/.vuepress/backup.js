@@ -69,3 +69,41 @@
       },
       { text: '留言板', link: '/board/' },
     ]
+
+    // sidebar: {
+      // '/guide/vue/': [
+      //   'test01', 'test02', 'test03'
+      // ],
+      // '/spring/': [
+      //   {
+      //     title: 'Spring',
+      //     collapsable: true,
+      //     children: ['ioc','aop']
+      //   }
+      // ], 
+      // '/database/sql/': [
+      //   {
+      //     title: 'SQL',
+      //     collapsable: true,
+      //     children: ['quick','1-ddl','2-select','3-where','4-function','5-subquery','6-multi-query']
+      //   }
+      // ],
+      // '/oauth2/': [
+      // // 'test01', 'test02', 'test03'
+      //   {
+      //     title: '原理',
+      //     collapsable: true,
+      //     children: ['1-template-grammar','2-data-mount','3-el-data']
+      //   }
+      // ],
+      // '/oauth2/action/': [
+      //   {
+      //     title: '应用',
+      //     collapsable: true,
+      //     children: ['1-non-single-file','2-single-file']
+      //   }
+      // ],        
+      // '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用
+    // },
+
+

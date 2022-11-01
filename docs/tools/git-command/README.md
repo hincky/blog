@@ -2,11 +2,14 @@
 title: README
 date: 2022-09-30 13:41:56
 permalink: /pages/2215fc/
-categories:
+categories: 
   - tools
   - git-command
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # git-command
 - [参考菜鸟教程git基本操作](https://www.runoob.com/git/git-basic-operations.html)

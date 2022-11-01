@@ -2,10 +2,13 @@
 title: postman
 date: 2022-10-29 11:41:05
 permalink: /pages/5e185e/
-categories:
+categories: 
   - share
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # API 接口
 ## 什么是接口（API）

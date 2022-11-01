@@ -2,11 +2,14 @@
 title: base
 date: 2022-10-12 20:26:02
 permalink: /pages/fe5781/
-categories:
+categories: 
   - vue
   - geek
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 极客时间vue专栏笔记
 vue 核心技术

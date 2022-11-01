@@ -2,10 +2,13 @@
 title: tcp
 date: 2022-10-12 20:26:02
 permalink: /pages/67bc6d/
-categories:
+categories: 
   - protocol
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # tcp协议
 

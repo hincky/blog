@@ -2,10 +2,13 @@
 title: idea-debug
 date: 2022-10-29 11:41:05
 permalink: /pages/1afd08/
-categories:
+categories: 
   - share
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 基础debug
 

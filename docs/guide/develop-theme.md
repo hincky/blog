@@ -2,10 +2,13 @@
 title: develop-theme
 date: 2022-09-29 17:26:33
 permalink: /pages/7f1ea4/
-categories:
+categories: 
   - guide
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 
 # 配置

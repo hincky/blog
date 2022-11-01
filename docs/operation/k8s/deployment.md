@@ -2,11 +2,14 @@
 title: deployment
 date: 2022-10-12 20:26:01
 permalink: /pages/4271a1/
-categories:
+categories: 
   - operation
   - k8s
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # deployment 工作负载
 

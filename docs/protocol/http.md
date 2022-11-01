@@ -2,10 +2,13 @@
 title: http
 date: 2022-10-12 20:26:02
 permalink: /pages/6c5dfb/
-categories:
+categories: 
   - protocol
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # http协议
 

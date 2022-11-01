@@ -2,11 +2,14 @@
 title: service
 date: 2022-10-12 20:26:02
 permalink: /pages/efe2c4/
-categories:
+categories: 
   - operation
   - k8s
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # service
 

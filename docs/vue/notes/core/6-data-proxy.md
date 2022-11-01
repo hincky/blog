@@ -2,12 +2,15 @@
 title: 6-data-proxy
 date: 2022-10-29 11:41:05
 permalink: /pages/fdb6b2/
-categories:
+categories: 
   - vue
   - notes
   - core
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 ## 数据代理
 A对象的a,b,c属性，可以直接用A.b这样的方式访问

@@ -2,11 +2,14 @@
 title: README
 date: 2022-10-12 20:26:02
 permalink: /pages/c8a3c2/
-categories:
+categories: 
   - operation
   - prometheus
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # prometheus
 

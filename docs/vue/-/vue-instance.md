@@ -2,11 +2,15 @@
 title: vue-instance
 date: 2022-10-12 20:26:02
 permalink: /pages/82f743/
-categories:
+categories: 
   - vue
-  - -
-tags:
   - 
+    - null
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # vue实例
 vue实例的一般步骤

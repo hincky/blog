@@ -2,10 +2,13 @@
 title: 3-el-data
 date: 2022-10-30 09:47:57
 permalink: /pages/9e7a44/
-categories:
+categories: 
   - oauth2
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # el 的两种写法
 1. el:'#root'

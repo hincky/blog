@@ -2,11 +2,14 @@
 title: ingress
 date: 2022-10-12 20:26:02
 permalink: /pages/e4d0b7/
-categories:
+categories: 
   - operation
   - k8s
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # ingress:集群的流量出入口
 

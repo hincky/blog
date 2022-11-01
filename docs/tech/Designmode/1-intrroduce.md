@@ -2,11 +2,14 @@
 title: 1-intrroduce
 date: 2022-10-29 11:41:05
 permalink: /pages/89dab9/
-categories:
+categories: 
   - tech
   - Designmode
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: xugaoyi
+  link: https://github.com/hincky
 ---
 # 设计模式
 

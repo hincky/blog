@@ -2,11 +2,14 @@
 title: 2-select
 date: 2022-10-29 11:41:05
 permalink: /pages/de45d7/
-categories:
+categories: 
   - database
   - sql
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # select基本查询语法
 

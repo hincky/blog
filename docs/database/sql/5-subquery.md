@@ -2,11 +2,14 @@
 title: 5-subquery
 date: 2022-10-29 11:41:05
 permalink: /pages/a87260/
-categories:
+categories: 
   - database
   - sql
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 子查询
 

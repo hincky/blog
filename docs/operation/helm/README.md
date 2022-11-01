@@ -2,11 +2,14 @@
 title: README
 date: 2022-10-12 20:26:01
 permalink: /pages/ad19df/
-categories:
+categories: 
   - operation
   - helm
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # helm k8s的包管理工具
 

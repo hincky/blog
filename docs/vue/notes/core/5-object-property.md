@@ -2,12 +2,15 @@
 title: 5-object-property
 date: 2022-10-29 11:41:05
 permalink: /pages/2cbf18/
-categories:
+categories: 
   - vue
   - notes
   - core
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 ## Object.defineProperty定义对象属性
 

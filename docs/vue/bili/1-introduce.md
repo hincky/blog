@@ -2,11 +2,14 @@
 title: 1-introduce
 date: 2022-10-29 11:41:05
 permalink: /pages/ea22c8/
-categories:
+categories: 
   - vue
   - bili
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # Vue
 

@@ -2,11 +2,14 @@
 title: git
 date: 2022-10-29 11:04:52
 permalink: /pages/339047/
-categories:
+categories: 
   - tools
   - git-command
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # git-command
 

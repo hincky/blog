@@ -2,12 +2,15 @@
 title: 4-mvvm
 date: 2022-10-29 11:41:05
 permalink: /pages/a5b76c/
-categories:
+categories: 
   - vue
   - notes
   - core
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 什么是MVVM模式
 

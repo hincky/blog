@@ -2,10 +2,13 @@
 title: 1-introduce
 date: 2022-10-29 11:41:05
 permalink: /pages/3ab2f6/
-categories:
+categories: 
   - kafka
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # kafka 
 

@@ -2,10 +2,13 @@
 title: 1-template-grammar
 date: 2022-10-30 09:47:57
 permalink: /pages/6cf73d/
-categories:
+categories: 
   - oauth2
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # 模板语法
 

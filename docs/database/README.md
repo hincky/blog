@@ -2,10 +2,13 @@
 title: README
 date: 2022-11-01 07:10:57
 permalink: /pages/c59510/
-categories:
+categories: 
   - database
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # SQL 目录
 

@@ -2,11 +2,14 @@
 title: README
 date: 2022-10-12 20:26:01
 permalink: /pages/772b84/
-categories:
+categories: 
   - database
   - redis
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # redis
 

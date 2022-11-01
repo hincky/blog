@@ -2,11 +2,14 @@
 title: 1-ddl
 date: 2022-10-29 11:41:05
 permalink: /pages/a38b52/
-categories:
+categories: 
   - database
   - sql
-tags:
-  - 
+tags: 
+  - null
+author: 
+  name: hincky
+  link: https://github.com/hincky
 ---
 # DDL 数据定义语言
 
