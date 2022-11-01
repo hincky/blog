@@ -90,7 +90,7 @@ module.exports = {
             text: '学习笔记',
             items: [ 
               { text: 'spring', link: '/backend/spring/' },
-              { text: 'java', link: '/note/java/' },
+              { text: 'java', link: '/backend/java/' },
               { text: '设计模式', link: '/backend/designmode/' }
             ],
           },
@@ -162,6 +162,19 @@ module.exports = {
             items: [
               { text: 'oauth2', link: '/cs/oauth2/' },
             ]
+          }
+        ],
+      },
+      {
+        text: '项目实战',
+        link: '/project/', 
+        items: [
+          { 
+            text: '项目列表',
+            items: [ 
+              { text: 'redis', link: '/pages/68617d/' },
+              { text: 'mysql', link: '/project/mysql/' }
+            ],
           }
         ],
       },
