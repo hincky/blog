@@ -11,7 +11,12 @@
   },
   "devDependencies": {
     "@vuepress/theme-blog": "^2.3.3",
+    "sitemap": "^7.1.1",
     "vuepress": "^1.9.7",
+    "vuepress-plugin-baidu-tongji": "^1.0.1",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-plugin-thirdparty-search": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.8",
     "vuepress-theme-vdoing": "^1.12.8"
   },
   "dependencies": {
