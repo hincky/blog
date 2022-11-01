@@ -1,10 +1,10 @@
 ---
-title: README
+title: k8s命令-kubectl
 date: 2022-10-29 11:41:05
 permalink: /pages/50f84a/
 categories: 
-  - tools
-  - k8s-command
+  - operation
+  - command
 tags: 
   - null
 author: 

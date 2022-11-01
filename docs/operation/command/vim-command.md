@@ -3,8 +3,8 @@ title: vim
 date: 2022-10-29 11:41:05
 permalink: /pages/906419/
 categories: 
-  - tools
-  - vim-command
+  - operation
+  - command
 tags: 
   - null
 author: 

@@ -1,10 +1,10 @@
 ---
-title: README
+title: crictl命令
 date: 2022-10-12 20:26:02
 permalink: /pages/8eba48/
 categories: 
-  - tools
-  - cri-command
+  - operation
+  - command
 tags: 
   - null
 author: 

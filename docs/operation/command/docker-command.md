@@ -1,10 +1,10 @@
 ---
-title: README
+title: docker命令
 date: 2022-10-12 20:26:02
 permalink: /pages/0541ed/
 categories: 
-  - tools
-  - docker-command
+  - operation
+  - command
 tags: 
   - null
 author: 

@@ -86,10 +86,10 @@ module.exports = {
           },
           {
             text: '学习笔记',
-            items: [ //
-              // { text: '《ES6 教程》', link: '/note/es6/' },
-              // { text: '《Vue》', link: '/note/vue/' },
-              // { text: '《React》', link: '/note/react/' }
+            items: [ 
+              { text: 'spring', link: '/backend/spring/' },
+              { text: 'java', link: '/note/java/' },
+              { text: '设计模式', link: '/backend/designmode/' }
             ],
           },
         ],
@@ -99,33 +99,47 @@ module.exports = {
         link: '/operation/', 
         items: [
           { 
-            text: '运维文章'
+            text: '容器技术',
+            items: [ 
+              { text: 'docker', link: '/operation/docker/' },
+              { text: 'k8s', link: '/operation/k8s/' },
+              { text: 'helm', link: '/operation/helm/' },
+              { text: 'prometheus', link: '/operation/prometheus/' },
+              { text: 'grafana', link: '/operation/grafana/' }
+            ],
           },
           {
-            text: '学习笔记',
-            items: [ //
-              // { text: '《ES6 教程》', link: '/note/es6/' },
-              // { text: '《Vue》', link: '/note/vue/' },
-              // { text: '《React》', link: '/note/react/' }
+            text: '命令集合',
+            items: [ 
+              { text: 'docker命令', link: '/pages/0541ed/' },
+              { text: 'git命令', link: '/pages/339047/' },
+              { text: 'vim命令', link: '/pages/906419/' },
+              { text: 'k8s命令', link: '/pages/50f84a/' }
             ],
           },
         ],
       },
       {
         text: '其他技术',
-        link: '/operation/', 
+        link: '/cs/', 
         items: [
           { 
             text: '计算机科学CS'
           },
           {
             text: '学习笔记',
-            items: [ //
-              // { text: '《ES6 教程》', link: '/note/es6/' },
-              // { text: '《Vue》', link: '/note/vue/' },
-              // { text: '《React》', link: '/note/react/' }
+            items: [
+              { text: '算法', link: '/cs/algorithm/' },
+              { text: '数据库', link: '/cs/database/' },
+              { text: '协议', link: '/cs/protocol/' },
             ],
           },
+          {
+            text: '技术分享',
+            items: [
+              { text: 'oauth2', link: '/cs/oauth2/' },
+            ]
+          }
         ],
       },
       {

@@ -3,8 +3,8 @@ title: git
 date: 2022-10-29 11:04:52
 permalink: /pages/339047/
 categories: 
-  - tools
-  - git-command
+  - operation
+  - command
 tags: 
   - null
 author: 
