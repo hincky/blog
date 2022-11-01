@@ -1,3 +1,13 @@
+---
+title: api-object
+date: 2022-10-12 20:26:01
+permalink: /pages/b063d1/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # API对象
 
 > 控制器模式

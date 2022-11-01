@@ -1,5 +1,13 @@
 ---
-footer: 粤ICP备2022120427号|Copyright © 2022 Hincky 
+footer: 粤ICP备2022120427号|Copyright © 2022 Hincky
+title: 1-non-single-file
+date: 2022-10-30 09:47:57
+permalink: /pages/77dfb9/
+categories: 
+  - oauth2
+  - action
+tags: 
+  - 
 ---
 # 组件
 

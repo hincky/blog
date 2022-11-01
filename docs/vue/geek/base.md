@@ -1,3 +1,13 @@
+---
+title: base
+date: 2022-10-12 20:26:02
+permalink: /pages/fe5781/
+categories:
+  - vue
+  - geek
+tags:
+  - 
+---
 # 极客时间vue专栏笔记
 vue 核心技术
 事件，插槽

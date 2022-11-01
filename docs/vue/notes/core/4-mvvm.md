@@ -1,3 +1,14 @@
+---
+title: 4-mvvm
+date: 2022-10-29 11:41:05
+permalink: /pages/a5b76c/
+categories:
+  - vue
+  - notes
+  - core
+tags:
+  - 
+---
 # 什么是MVVM模式
 
 MVVM模式：

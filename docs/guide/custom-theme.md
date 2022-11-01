@@ -1,3 +1,12 @@
+---
+title: custom-theme
+date: 2022-09-30 08:10:01
+permalink: /pages/bfa872/
+categories:
+  - guide
+tags:
+  - 
+---
 # 怎么自定义自己的vuepress主题
 
 在项目根目录下，创建一个名为`v-hin`自定义主题文件夹：

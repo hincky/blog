@@ -1,3 +1,13 @@
+---
+title: README
+date: 2022-10-29 11:41:05
+permalink: /pages/50f84a/
+categories:
+  - tools
+  - k8s-command
+tags:
+  - 
+---
 # kubectl-command
 
 [官网命令参考](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-strong-getting-started-strong-)

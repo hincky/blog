@@ -1,3 +1,12 @@
+---
+title: README
+date: 2022-10-12 20:26:01
+permalink: /pages/c750e1/
+categories:
+  - docker
+tags:
+  - 
+---
 # docker
 
 一个“容器”，实际上是一个由`Linux Namespace`、`Linux Cgroups`和`rootfs`三种技术构建出来的进程的隔离环境。

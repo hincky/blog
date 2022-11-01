@@ -1,4 +1,14 @@
-# where
+---
+title: 3-where
+date: 2022-10-29 11:41:05
+permalink: /pages/5b5dca/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
+# where条件查询
 
 ## 比较运算符
 |比较运算符|sql例句|

@@ -1,3 +1,14 @@
+---
+title: 3-el-data
+date: 2022-10-29 11:41:05
+permalink: /pages/bd6281/
+categories:
+  - vue
+  - notes
+  - core
+tags:
+  - 
+---
 # el 的两种写法
 1. el:'#root'
 2. 先创建Vue实例，再通过v.$mount('#root')指定el的值 

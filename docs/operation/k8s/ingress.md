@@ -1,3 +1,13 @@
+---
+title: ingress
+date: 2022-10-12 20:26:02
+permalink: /pages/e4d0b7/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # ingress:集群的流量出入口
 
 > 本节三个重要角色：

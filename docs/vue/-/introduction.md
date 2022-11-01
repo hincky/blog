@@ -1,3 +1,13 @@
+---
+title: introduction
+date: 2022-10-29 11:25:43
+permalink: /pages/3fdbf2/
+categories:
+  - vue
+  - -
+tags:
+  - 
+---
 # vue
 
 # 什么是MVVM模式

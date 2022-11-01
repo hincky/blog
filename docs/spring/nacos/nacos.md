@@ -1,3 +1,13 @@
+---
+title: nacos
+date: 2022-10-29 11:41:05
+permalink: /pages/53a6f6/
+categories:
+  - spring
+  - nacos
+tags:
+  - 
+---
 # Nacos
 
 [Official Website](https://nacos.io/zh-cn/docs/what-is-nacos.html)

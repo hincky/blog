@@ -1,3 +1,14 @@
+---
+title: 6-data-proxy
+date: 2022-10-29 11:41:05
+permalink: /pages/fdb6b2/
+categories:
+  - vue
+  - notes
+  - core
+tags:
+  - 
+---
 ## 数据代理
 A对象的a,b,c属性，可以直接用A.b这样的方式访问
 修改就A.b=newValue就可以修改了

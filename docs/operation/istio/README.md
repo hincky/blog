@@ -1,3 +1,13 @@
+---
+title: README
+date: 2022-10-12 20:26:01
+permalink: /pages/ade9fa/
+categories:
+  - operation
+  - istio
+tags:
+  - 
+---
 # istio
 
 [中文官网地址](https://istio.io/latest/zh/docs/concepts/what-is-istio/)

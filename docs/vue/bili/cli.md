@@ -1,3 +1,13 @@
+---
+title: cli
+date: 2022-10-29 11:41:05
+permalink: /pages/781222/
+categories:
+  - vue
+  - bili
+tags:
+  - 
+---
 # vue cli脚手架
 
 ## 安装

@@ -1,3 +1,13 @@
+---
+title: 5-subquery
+date: 2022-10-29 11:41:05
+permalink: /pages/a87260/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
 # 子查询
 
 - 关联子查询：主句查询条件和从句查询条件进行了关联，外部执行一次里面就执行一次

@@ -1,3 +1,13 @@
+---
+title: git
+date: 2022-10-29 11:04:52
+permalink: /pages/339047/
+categories:
+  - tools
+  - git-command
+tags:
+  - 
+---
 # git-command
 
 - [参考菜鸟教程git基本操作](https://www.runoob.com/git/git-basic-operations.html)

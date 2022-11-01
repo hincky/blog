@@ -1,3 +1,14 @@
+---
+title: 2-data-mount
+date: 2022-10-29 11:41:05
+permalink: /pages/577cfe/
+categories:
+  - vue
+  - notes
+  - core
+tags:
+  - 
+---
 ## 单向绑定
 
 v-bind只能通过Vue实例data里的属性，单向改变html标签表达式的值

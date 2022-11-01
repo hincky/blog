@@ -1,3 +1,12 @@
+---
+title: structure
+date: 2022-09-29 17:26:33
+permalink: /pages/8cae27/
+categories:
+  - guide
+tags:
+  - 
+---
 > 开头先做一个声明和资源分享
 
 本网站项目可以直接从我的gitee上直接clone下来，然后再照着文档学习实践

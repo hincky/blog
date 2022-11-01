@@ -1,3 +1,12 @@
+---
+title: idea-debug
+date: 2022-10-29 11:41:05
+permalink: /pages/1afd08/
+categories:
+  - share
+tags:
+  - 
+---
 # 基础debug
 
 ## debug相关的快捷键

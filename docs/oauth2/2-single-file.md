@@ -1,3 +1,12 @@
+---
+title: 2-single-file
+date: 2022-10-30 09:47:57
+permalink: /pages/95185a/
+categories:
+  - oauth2
+tags:
+  - 
+---
 # 单文件组件
 
 

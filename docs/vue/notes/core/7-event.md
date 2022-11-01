@@ -1,3 +1,14 @@
+---
+title: 7-event
+date: 2022-10-29 11:41:05
+permalink: /pages/3f33d3/
+categories:
+  - vue
+  - notes
+  - core
+tags:
+  - 
+---
 # 事件
 
 ```html

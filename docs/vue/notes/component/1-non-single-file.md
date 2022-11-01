@@ -1,3 +1,14 @@
+---
+title: 1-non-single-file
+date: 2022-10-29 11:41:05
+permalink: /pages/a44bc1/
+categories:
+  - vue
+  - notes
+  - component
+tags:
+  - 
+---
 # 组件
 
 尽可能局部，细致，单一。方便以后的维护和复用，用哪个加哪个即可。

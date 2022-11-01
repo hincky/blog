@@ -1,3 +1,13 @@
+---
+title: nic
+date: 2022-10-12 20:26:02
+permalink: /pages/9b7407/
+categories:
+  - operation
+  - nginx
+tags:
+  - 
+---
 # 安装nginx ingress controller
 
 ## 对应好版本

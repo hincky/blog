@@ -1,3 +1,12 @@
+---
+title: develop-theme
+date: 2022-09-29 17:26:33
+permalink: /pages/7f1ea4/
+categories:
+  - guide
+tags:
+  - 
+---
 
 # 配置
 ## 配置文件：选项配置

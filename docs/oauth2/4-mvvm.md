@@ -1,3 +1,12 @@
+---
+title: 4-mvvm
+date: 2022-10-30 09:47:57
+permalink: /pages/cf86f5/
+categories:
+  - oauth2
+tags:
+  - 
+---
 # 什么是MVVM模式
 
 MVVM模式：

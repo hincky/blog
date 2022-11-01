@@ -1,3 +1,13 @@
+---
+title: pod
+date: 2022-10-12 20:26:02
+permalink: /pages/1fbb2b/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # pod
 
 是 Kubernetes 项目的原子调度单位，如果k8s是操作系统，那pod就是虚拟机。

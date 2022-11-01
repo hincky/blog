@@ -1,3 +1,13 @@
+---
+title: service
+date: 2022-10-12 20:26:02
+permalink: /pages/efe2c4/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # service
 
 它是 Kubernetes 内置的负载均衡机制:

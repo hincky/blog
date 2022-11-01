@@ -1,3 +1,12 @@
+---
+title: oauth2
+date: 2022-10-30 09:47:57
+permalink: /pages/f85137/
+categories:
+  - oauth2
+tags:
+  - 
+---
 # oAuth2
 
 授权协议：就是保证第三方（软件）只有在获得授权之后，才可以进一步访问授权者的数据。

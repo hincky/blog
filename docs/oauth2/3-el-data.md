@@ -1,3 +1,12 @@
+---
+title: 3-el-data
+date: 2022-10-30 09:47:57
+permalink: /pages/9e7a44/
+categories:
+  - oauth2
+tags:
+  - 
+---
 # el 的两种写法
 1. el:'#root'
 2. 先创建Vue实例，再通过v.$mount('#root')指定el的值 

@@ -1,3 +1,13 @@
+---
+title: vim
+date: 2022-10-29 11:41:05
+permalink: /pages/906419/
+categories:
+  - tools
+  - vim-command
+tags:
+  - 
+---
 set nu 列出行号
 
 u 恢复上一次操作

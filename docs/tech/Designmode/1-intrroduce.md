@@ -1,3 +1,13 @@
+---
+title: 1-intrroduce
+date: 2022-10-29 11:41:05
+permalink: /pages/89dab9/
+categories:
+  - tech
+  - Designmode
+tags:
+  - 
+---
 # 设计模式
 
 1. 创建型常用的有：

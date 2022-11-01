@@ -1,3 +1,13 @@
+---
+title: rke
+date: 2022-10-12 20:26:02
+permalink: /pages/ee79cb/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # rke install kubernetes
 没有特殊标明，就是所有主机都要进行操作
 

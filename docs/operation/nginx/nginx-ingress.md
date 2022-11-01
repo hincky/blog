@@ -1,3 +1,13 @@
+---
+title: nginx-ingress
+date: 2022-10-29 11:41:05
+permalink: /pages/72044b/
+categories:
+  - operation
+  - nginx
+tags:
+  - 
+---
 ## nginx ingress version
 
 - nginx official version

@@ -1,3 +1,14 @@
+---
+title: chapter 14 Single File Components
+date: 2022-10-05 23:06:32
+permalink: /pages/a201c7/
+categories:
+  - vue
+  - vuejs
+  - js教程
+tags:
+  - 
+---
 ### 安装 `npm`
 `npm` 全称为 `Node Package Manager`，是一个基于`Node.js`的包管理器，也是整个`Node.js`社区最流行、支持的第三方模块最多的包管理器。
 ```

@@ -1,4 +1,14 @@
-# 基本语法
+---
+title: 2-select
+date: 2022-10-29 11:41:05
+permalink: /pages/de45d7/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
+# select基本查询语法
 
 |作用|sql例句|
 |:---:|:---:|

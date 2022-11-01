@@ -1,3 +1,13 @@
+---
+title: component
+date: 2022-10-12 20:26:02
+permalink: /pages/657c3c/
+categories:
+  - vue
+  - geek
+tags:
+  - 
+---
 ## vue组件
 组件提供了复用的可能
 

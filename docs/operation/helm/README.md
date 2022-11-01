@@ -1,3 +1,13 @@
+---
+title: README
+date: 2022-10-12 20:26:01
+permalink: /pages/ad19df/
+categories:
+  - operation
+  - helm
+tags:
+  - 
+---
 # helm k8s的包管理工具
 
 [helm官网地址](https://helm.sh/zh/)

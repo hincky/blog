@@ -1,3 +1,12 @@
+---
+title: 1-introduce
+date: 2022-10-29 11:41:05
+permalink: /pages/3ab2f6/
+categories:
+  - kafka
+tags:
+  - 
+---
 # kafka 
 
 Apache Kafka 是一款开源的分布式消息（Record）引擎系统。负责在不同系统之间传递语义准确的消息，实现松耦合的异步式数据传递。

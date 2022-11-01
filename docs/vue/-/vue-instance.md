@@ -1,3 +1,13 @@
+---
+title: vue-instance
+date: 2022-10-12 20:26:02
+permalink: /pages/82f743/
+categories:
+  - vue
+  - -
+tags:
+  - 
+---
 # vue实例
 vue实例的一般步骤
 - 创建实例

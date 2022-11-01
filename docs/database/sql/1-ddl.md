@@ -1,6 +1,14 @@
-# SQL
-
-## DDL 数据定义语言
+---
+title: 1-ddl
+date: 2022-10-29 11:41:05
+permalink: /pages/a38b52/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
+# DDL 数据定义语言
 
 ddl就是对**数据库**和**数据表**进行定义的语言
 增删改create drop alter

@@ -1,3 +1,12 @@
+---
+title: java-concurrent
+date: 2022-10-29 11:41:05
+permalink: /pages/bb6521/
+categories:
+  - share
+tags:
+  - 
+---
 # 进程与线程的区别
 
 是否单独占有内存地址空间及其它系统资源（比如I/O）：

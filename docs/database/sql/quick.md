@@ -1,4 +1,14 @@
-# select查询语法
+---
+title: quick
+date: 2022-10-29 11:41:05
+permalink: /pages/1f3cb0/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
+# sql快查
 
 ## 语句顺序
 

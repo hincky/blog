@@ -1,3 +1,12 @@
+---
+title: 1-template-grammar
+date: 2022-10-30 09:47:57
+permalink: /pages/6cf73d/
+categories:
+  - oauth2
+tags:
+  - 
+---
 # 模板语法
 
 最先接触的模板

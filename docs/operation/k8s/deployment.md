@@ -1,3 +1,13 @@
+---
+title: deployment
+date: 2022-10-12 20:26:01
+permalink: /pages/4271a1/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # deployment 工作负载
 
 Deployment，是一个定义多副本应用（即多个副本 Pod）的对象

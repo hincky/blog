@@ -1,3 +1,13 @@
+---
+title: yml
+date: 2022-10-12 20:26:02
+permalink: /pages/cd2fa3/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # yaml文件
 
 k8s希望你用`YAML` 文件的方式，即：把容器的定义、参数、配置，统统记录在一个**声明式**的 YAML 文件中，然后用这样一句指令把它运行/删除起来：

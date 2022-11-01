@@ -1,3 +1,13 @@
+---
+title: 4-function
+date: 2022-10-29 11:41:05
+permalink: /pages/e27f3b/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
 # 函数
 
 ## 聚集函数

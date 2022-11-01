@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@vuepress/theme-blog": "^2.3.3",
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.7",
+    "vuepress-theme-vdoing": "^1.12.8"
   },
   "dependencies": {
     "vuepress-theme-reco": "^1.6.16"

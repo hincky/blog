@@ -1,3 +1,13 @@
+---
+title: README
+date: 2022-10-12 20:26:01
+permalink: /pages/e253bd/
+categories:
+  - database
+  - mysql
+tags:
+  - 
+---
 # MySQL
 
 > 为什么要做这个栏目

@@ -1,3 +1,13 @@
+---
+title: README
+date: 2022-10-12 20:26:02
+permalink: /pages/8eba48/
+categories:
+  - tools
+  - cri-command
+tags:
+  - 
+---
 # crictl 命令
 
 [github-install-containerd](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)

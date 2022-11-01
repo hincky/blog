@@ -1,3 +1,13 @@
+---
+title: ingress-action
+date: 2022-10-12 20:26:02
+permalink: /pages/d7f9a4/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # ingress controller实战
 
 > 本文讲述如何在k8s集群中部署nginx ingress controller

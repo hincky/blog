@@ -1,3 +1,13 @@
+---
+title: 6-multi-query
+date: 2022-10-29 11:41:05
+permalink: /pages/1ff358/
+categories:
+  - database
+  - sql
+tags:
+  - 
+---
 # 多表查询
 
 ## 交叉连接

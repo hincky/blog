@@ -1,3 +1,12 @@
+---
+title: postman
+date: 2022-10-29 11:41:05
+permalink: /pages/5e185e/
+categories:
+  - share
+tags:
+  - 
+---
 # API 接口
 ## 什么是接口（API）
 api 授予拥有鉴权码的应用来调用的方式方法

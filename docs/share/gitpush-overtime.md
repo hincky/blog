@@ -1,3 +1,12 @@
+---
+title: gitpush-overtime
+date: 2022-09-29 17:26:33
+permalink: /pages/6b6220/
+categories:
+  - share
+tags:
+  - 
+---
 # git push/pull总是超时怎么办
 
 > Q: 

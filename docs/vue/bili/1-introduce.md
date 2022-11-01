@@ -1,3 +1,13 @@
+---
+title: 1-introduce
+date: 2022-10-29 11:41:05
+permalink: /pages/ea22c8/
+categories:
+  - vue
+  - bili
+tags:
+  - 
+---
 # Vue
 
 从应用的广泛程度和学习曲线来说，建议用vue2开始学习，这里是[官方文档](https://cn.vuejs.org/v2/guide/)

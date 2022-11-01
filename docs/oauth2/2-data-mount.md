@@ -1,3 +1,12 @@
+---
+title: 2-data-mount
+date: 2022-10-30 09:47:57
+permalink: /pages/30780c/
+categories:
+  - oauth2
+tags:
+  - 
+---
 ## 单向绑定
 
 v-bind只能通过Vue实例data里的属性，单向改变html标签表达式的值

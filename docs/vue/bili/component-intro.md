@@ -1,3 +1,13 @@
+---
+title: component-intro
+date: 2022-10-29 11:41:05
+permalink: /pages/4231a6/
+categories:
+  - vue
+  - bili
+tags:
+  - 
+---
 # 组件
 
 ## 模块与组件，模块化和组件化

@@ -1,3 +1,13 @@
+---
+title: README
+date: 2022-10-12 20:26:01
+permalink: /pages/f53749/
+categories:
+  - operation
+  - k8s
+tags:
+  - 
+---
 # k8s概念
 
 类比关系表

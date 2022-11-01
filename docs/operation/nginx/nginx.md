@@ -1,3 +1,13 @@
+---
+title: nginx
+date: 2022-10-12 20:26:02
+permalink: /pages/16da93/
+categories:
+  - operation
+  - nginx
+tags:
+  - 
+---
 # nginx
 
 组成
