@@ -19,15 +19,16 @@ features:
   details: 运维相关的技术文档，总结等文章
   link: /operation/ # 可选
   imgUrl: /img/operation.png # 可选
----
 
 ---
+
+
 > 本网站只是由丐版阿里云服务器驱动，经不起攻击哈，小伙伴们悠着点访问呗，谢谢啦~
----
 
-**公众号**
+
+<!-- **公众号**
 
 学习不走弯路，关注公众号「hincky」，看更多通俗易懂的知识！
 
-![img](./.vuepress/public/img/hincky-ERcode-28KB.jpg)
+![img](/img/hincky-ERcode-28KB.jpg) -->
 

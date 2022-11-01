@@ -38,7 +38,7 @@ module.exports = {
     // },
 
 
-    logo: '/assets/img/earth-logo-removebg.png', //导航栏logo
+    logo: '/img/earth-logo-removebg.png', //导航栏logo
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
