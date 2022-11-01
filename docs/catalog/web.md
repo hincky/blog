@@ -1,0 +1,18 @@
+---
+pageComponent:
+  name: Catalogue
+  data:
+    path: web
+    imgUrl: /img/web.png
+    description: 前端相关的技术文档
+title: 前端
+date: 2022-11-01 17:35:30
+permalink: /web/
+sidebar: false
+article: false
+comment: false
+editLink: false
+author: 
+  name: hincky
+  link: https://github.com/hincky
+---

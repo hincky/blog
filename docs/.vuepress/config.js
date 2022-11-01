@@ -51,8 +51,8 @@ module.exports = {
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: 'Last Updated',
     docsDir: 'docs', // 编辑的文件夹
-    editLinks: false, // 启用编辑
-    editLinkText: '编辑',
+    editLinks: true, // 启用编辑
+    editLinkText: 'edit on github',
     sidebarDepth: 2, //侧边栏显示深度，默认1，最大2（显示到h3标题）
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
@@ -127,11 +127,21 @@ module.exports = {
             text: '计算机科学CS'
           },
           {
-            text: '学习笔记',
+            text: '数据库',
             items: [
-              { text: '算法', link: '/cs/algorithm/' },
-              { text: '数据库', link: '/cs/database/' },
-              { text: '协议', link: '/cs/protocol/' },
+              { text: 'sql', link: '/cs/database/sql/' },
+              { text: 'mysql', link: '/cs/database/mysql/' },
+              { text: 'redis', link: '/cs/database/redis' },
+              { text: 'mongoDB', link: '/cs/database/mongodb/' },
+            ],
+          },
+          {
+            text: '协议',
+            items: [
+              { text: 'http', link: '/cs/protocol/' },
+              { text: 'tcp', link: '/cs/protocol/' },
+              { text: 'netty', link: '/cs/protocol/' },
+              { text: 'dubbo', link: '/cs/protocol/' },
             ],
           },
           {

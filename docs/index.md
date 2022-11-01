@@ -5,6 +5,8 @@ heroText: Hincky's blog
 tagline: 路漫漫其修远兮，吾将上下而求索
 # actionText: 快速上手 →
 # actionLink: /guide/structure
+# bannerBg: auto  # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+bannerBg: none
 
 features:
 - title: 前端
