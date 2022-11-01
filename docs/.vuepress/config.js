@@ -72,7 +72,9 @@ module.exports = {
           {
             text: '学习笔记',
             items: [ //
-              { text: '《Vue》', link: '/note/vue/' }
+              { text: '《Vue》', link: '/web/vue/' },
+              { text: 'tomcat', link: '/web/tomcat/' },
+              { text: 'nginx', link: '/web/nginx/' }
             ],
           },
         ],
@@ -105,7 +107,8 @@ module.exports = {
               { text: 'k8s', link: '/operation/k8s/' },
               { text: 'helm', link: '/operation/helm/' },
               { text: 'prometheus', link: '/operation/prometheus/' },
-              { text: 'grafana', link: '/operation/grafana/' }
+              { text: 'grafana', link: '/operation/grafana/' },
+              { text: 'jenkins', link: '/operation/jenkins/' }
             ],
           },
           {
@@ -143,6 +146,16 @@ module.exports = {
               { text: 'netty', link: '/cs/protocol/' },
               { text: 'dubbo', link: '/cs/protocol/' },
             ],
+          },
+          {
+            text: '算法',
+            items: [
+              { text: '数组', link: '/algorithm/array/' },
+              { text: '链表', link: '/algorithm/list/' },
+              { text: '树', link: '/algorithm/tree/' },
+              { text: '排序', link: '/algorithm/sort/' },
+              { text: '动态规划', link: '/algorithm/dp/' },
+            ]
           },
           {
             text: '技术分享',
@@ -272,6 +285,9 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
+    toc: {
+        includeLevel:[1, 2, 3, 4]
+    }
   },
 }
 
