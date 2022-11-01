@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /hero.png
-heroText: Hincky
+heroText: Hincky's blog
 tagline: 路漫漫其修远兮，吾将上下而求索
 # actionText: 快速上手 →
 # actionLink: /guide/structure

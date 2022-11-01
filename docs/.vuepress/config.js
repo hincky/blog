@@ -1,6 +1,13 @@
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/img/h-icon.jpg' }],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: 'hinkcy的个人技术博客,主要记录工作学习中的文档和经验，包括前后端开发以及运维,面试',
+      },
+    ],
     // 下面这一行是对移动端优化
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
@@ -42,7 +49,7 @@ module.exports = {
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
-    // lastUpdated: 'Last Updated',
+    lastUpdated: 'Last Updated',
     docsDir: 'docs', // 编辑的文件夹
     editLinks: false, // 启用编辑
     editLinkText: '编辑',
@@ -132,7 +139,7 @@ module.exports = {
       },
     ],
     updateBar: { // 最近更新栏
-      showToArticle: false, // 显示到文章页底部，默认true
+      showToArticle: true, // 显示到文章页底部，默认true
       moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
     },
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
@@ -161,9 +168,9 @@ module.exports = {
           link: 'https://github.com/hincky',
         },
         {
-          iconClass: 'icon-erji',
+          iconClass: 'icon-gitee',
           title: '听音乐',
-          link: 'https://music.163.com/#/playlist?id=755597173',
+          link: 'https://gitee.com/hincky',
         },
       ],
     },
