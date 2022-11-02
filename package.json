@@ -19,7 +19,5 @@
     "vuepress-plugin-zooming": "^1.1.8",
     "vuepress-theme-vdoing": "^1.12.8"
   },
-  "dependencies": {
-    "vuepress-theme-reco": "^1.6.16"
-  }
+  "dependencies": {}
 }

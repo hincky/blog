@@ -1,3 +1,6 @@
+const DOMAIN_NAME = 'hincky.com' // 域名 (不带https)
+const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
+
 module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/img/h-icon.jpg' }],
@@ -265,6 +268,10 @@ module.exports = {
             title: '在google中搜索',
             frontUrl: 'https://google.com/search?q=',
           },
+          {
+            title: '通过百度搜索本站的',
+            frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+          },
         ],
       }
     ],
@@ -295,7 +302,7 @@ module.exports = {
     [
       "sitemap", // 网站地图
       {
-        hostname: 'hincky.com',
+        hostname: WEB_SITE,
       },
     ],
   ],
