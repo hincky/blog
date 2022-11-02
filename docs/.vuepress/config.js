@@ -153,7 +153,16 @@ module.exports = {
           {
             text: '技术分享',
             items: [
-              { text: 'oauth2', link: '/pages/f85137/' },
+              { text: 'git push/pull总是超时怎么办', link: '/pages/6b6220/' },
+              { text: 'idea debug技巧', link: '/pages/1afd08/' },
+              { text: 'postman使用', link: '/pages/5e185e/' },
+              { text: '问题总结', link: '/pages/6386cf/' },
+            ]
+          },
+          {
+            text: 'Oauth2',
+            items: [
+              { text: 'Oauth2原理', link: '/pages/f85137/' },
             ]
           }
         ],
