@@ -8,7 +8,7 @@ module.exports = {
       'meta',
       {
         name: 'keywords',
-        content: 'hinkcy的个人技术博客,主要记录工作学习中的文档和经验，包括前后端开发以及运维,面试',
+        content: 'hincky的个人技术博客,主要记录工作学习中的文档和经验，包括前后端开发以及运维,面试',
       },
     ],
     // 下面这一行是对移动端优化
