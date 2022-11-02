@@ -79,6 +79,7 @@ module.exports = {
             text: '语言类',
             items: [
               { text: 'java', link: '/pages/bb6521/' },
+              { text: 'python', link: '/pages/32beb7/' },
               { text: '设计模式', link: '/pages/89dab9/' }
             ]
           },        
@@ -110,6 +111,7 @@ module.exports = {
           {
             text: '命令集合',
             items: [ 
+              { text: 'linux命令', link: 'https://wangchujiang.com/linux-command/' },
               { text: 'docker命令', link: '/pages/0541ed/' },
               { text: 'git命令', link: '/pages/339047/' },
               { text: 'vim命令', link: '/pages/906419/' },
