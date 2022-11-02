@@ -67,8 +67,6 @@ module.exports = {
             text: '学习笔记',
             items: [ //
               { text: '《Vue》', link: '/pages/07fe52/' }
-              // { text: 'tomcat', link: '/web/tomcat/' },
-              // { text: 'nginx', link: '/web/nginx/' }
             ],
           }
         ],
@@ -89,8 +87,7 @@ module.exports = {
             items: [ 
               { text: 'Spring', link: '/pages/f5b0a7/' },
               { text: 'Spring Security', link: '/pages/00c080/' },
-              { text: 'Mybatis', link: '/backend/spring/' },
-              { text: 'spring', link: '/backend/spring/' }
+              { text: 'Mybatis', link: '/pages/77c768/' }
             ],
           },
         ],
@@ -102,12 +99,12 @@ module.exports = {
           { 
             text: '容器技术',
             items: [ 
-              { text: 'docker', link: '/operation/docker/' },
-              { text: 'k8s', link: '/operation/k8s/' },
-              { text: 'helm', link: '/operation/helm/' },
-              { text: 'prometheus', link: '/operation/prometheus/' },
-              { text: 'grafana', link: '/operation/grafana/' },
-              { text: 'jenkins', link: '/operation/jenkins/' }
+              { text: 'docker', link: '/pages/77610c/' },
+              { text: 'k8s', link: '/pages/f53749/' },
+              { text: 'helm', link: '/pages/ad19df/' },
+              { text: 'prometheus', link: '/pages/c8a3c2/' },
+              { text: 'grafana', link: '/pages/59dbc6/' },
+              { text: 'jenkins', link: '/pages/b3ef60/' }
             ],
           },
           {
