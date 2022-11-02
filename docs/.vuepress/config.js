@@ -63,20 +63,14 @@ module.exports = {
         text: '前端',
         link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
-          { // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-            text: '前端文章',
-            // items: [
-            //   { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-            // ],
-          },
           {
             text: '学习笔记',
             items: [ //
-              { text: '《Vue》', link: '/web/vue/' },
-              { text: 'tomcat', link: '/web/tomcat/' },
-              { text: 'nginx', link: '/web/nginx/' }
+              { text: '《Vue》', link: '/pages/07fe52/' }
+              // { text: 'tomcat', link: '/web/tomcat/' },
+              // { text: 'nginx', link: '/web/nginx/' }
             ],
-          },
+          }
         ],
       },
       {
@@ -84,14 +78,19 @@ module.exports = {
         link: '/backend/', 
         items: [
           { 
-            text: '后端文章'
-          },
-          {
-            text: '学习笔记',
+            text: '语言类',
+            items: [
+              { text: 'java', link: '/pages/bb6521/' },
+              { text: '设计模式', link: '/pages/89dab9/' }
+            ]
+          },        
+          { 
+            text: '框架类',
             items: [ 
-              { text: 'spring', link: '/backend/spring/' },
-              { text: 'java', link: '/backend/java/' },
-              { text: '设计模式', link: '/backend/designmode/' }
+              { text: 'Spring', link: '/pages/f5b0a7/' },
+              { text: 'Spring Security', link: '/pages/00c080/' },
+              { text: 'Mybatis', link: '/backend/spring/' },
+              { text: 'spring', link: '/backend/spring/' }
             ],
           },
         ],
@@ -132,35 +131,35 @@ module.exports = {
           {
             text: '数据库',
             items: [
-              { text: 'sql', link: '/cs/database/sql/' },
-              { text: 'mysql', link: '/cs/database/mysql/' },
-              { text: 'redis', link: '/cs/database/redis' },
-              { text: 'mongoDB', link: '/cs/database/mongodb/' },
+              { text: 'sql', link: '/pages/1f3cb0/' },
+              // { text: 'mysql', link: '/cs/database/mysql/' },
+              // { text: 'redis', link: '/cs/database/redis' },
+              // { text: 'mongoDB', link: '/cs/database/mongodb/' },
             ],
           },
           {
             text: '协议',
             items: [
-              { text: 'http', link: '/cs/protocol/' },
-              { text: 'tcp', link: '/cs/protocol/' },
-              { text: 'netty', link: '/cs/protocol/' },
-              { text: 'dubbo', link: '/cs/protocol/' },
+              { text: 'http', link: '/pages/6c5dfb/' },
+              { text: 'tcp', link: '/pages/67bc6d/' },
+              // { text: 'netty', link: '/cs/protocol/' },
+              // { text: 'dubbo', link: '/cs/protocol/' },
             ],
           },
-          {
-            text: '算法',
-            items: [
-              { text: '数组', link: '/algorithm/array/' },
-              { text: '链表', link: '/algorithm/list/' },
-              { text: '树', link: '/algorithm/tree/' },
-              { text: '排序', link: '/algorithm/sort/' },
-              { text: '动态规划', link: '/algorithm/dp/' },
-            ]
-          },
+          // {
+          //   text: '算法',
+          //   items: [
+          //     { text: '数组', link: '/algorithm/array/' },
+          //     { text: '链表', link: '/algorithm/list/' },
+          //     { text: '树', link: '/algorithm/tree/' },
+          //     { text: '排序', link: '/algorithm/sort/' },
+          //     { text: '动态规划', link: '/algorithm/dp/' },
+          //   ]
+          // },
           {
             text: '技术分享',
             items: [
-              { text: 'oauth2', link: '/cs/oauth2/' },
+              { text: 'oauth2', link: '/pages/f85137/' },
             ]
           }
         ],
@@ -172,8 +171,8 @@ module.exports = {
           { 
             text: '项目列表',
             items: [ 
-              { text: 'redis', link: '/pages/68617d/' },
-              { text: 'mysql', link: '/project/mysql/' }
+              { text: 'redis项目', link: '/pages/68617d/' },
+              { text: '微服务项目', link: '/pages/2888db/' }
             ],
           }
         ],
