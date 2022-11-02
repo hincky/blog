@@ -122,9 +122,6 @@ module.exports = {
         text: '其他技术',
         link: '/cs/', 
         items: [
-          { 
-            text: '计算机科学CS'
-          },
           {
             text: '数据库',
             items: [
