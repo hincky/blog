@@ -27,35 +27,15 @@ module.exports = {
   }
   },
   themeConfig: {
-    //以下是reco主题的配置内容
-    // authorAvatar: '/avatar.png', //首页头像，搭配reco主题
-    // record: '粤ICP备2022120427号', //ICP 备案文案;配合reco主题使用
-    // recordLink: 'https://beian.miit.gov.cn/', //ICP 备案指向链接;配合reco主题使用
-    // cyberSecurityRecord: '公安部备案文案', //公安部备案文案;配合reco主题使用
-    // cyberSecurityLink: '公安部备案指向链接', //公安部备案指向链接;配合reco主题使用
-    // startYear: '2022', // 项目开始时间，只填写年份;配合reco主题使用
-    // author: 'hincky', //作者姓名，配合reco主题使用
-    // authorAvatar: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/hincky-avatar.png',//作者头像，配合reco主题使用
-    // blogConfig: { //博客设置,配合reco主题使用
-    //   category: {
-    //     location: 2,     // 在导航栏菜单中所占的位置，默认2
-    //     text: 'Category' // 默认文案 “分类”
-    //   },
-    //   tag: {
-    //     location: 3,     // 在导航栏菜单中所占的位置，默认3
-    //     text: 'Tag'      // 默认文案 “标签”
-    //   }
-    // },
-
-
     logo: '/img/earth-logo-removebg.png', //导航栏logo
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: 'Last Updated',
+    categoryText: '随笔', //碎片化文章默认分类值为 随笔
     docsDir: 'docs', // 编辑的文件夹
     editLinks: true, // 启用编辑
-    editLinkText: 'edit on github',
+    editLinkText: '编辑',
     sidebarDepth: 2, //侧边栏显示深度，默认1，最大2（显示到h3标题）
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
