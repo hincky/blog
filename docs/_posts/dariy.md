@@ -1,14 +1,15 @@
 ---
-title: README
+title: 当代中学生缩影
 date: 2022-10-12 20:26:01
 permalink: /pages/67f897/
 categories: 
-  - life
+  - 随笔
 tags: 
   - null
 author: 
   name: hincky
   link: https://github.com/hincky
+sidebar: auto
 ---
 # 20221006
 
