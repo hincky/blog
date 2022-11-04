@@ -150,6 +150,8 @@ module.exports = {
               { text: 'idea debug技巧', link: '/pages/1afd08/' },
               { text: 'postman使用', link: '/pages/5e185e/' },
               { text: '问题总结', link: '/pages/6386cf/' },
+              { text: 'idea使用技巧', link: '/pages/29dd9b/' },
+              
             ]
           },
           {
