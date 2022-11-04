@@ -49,7 +49,9 @@ module.exports = {
           {
             text: '学习笔记',
             items: [ //
-              { text: '《Vue》', link: '/pages/07fe52/' }
+              { text: 'Vue笔记', link: '/pages/114158caa9e96df0/' },
+              { text: 'SEO搜索引擎优化', link: '/pages/b1fd98/' },
+              { text: 'nginx', link: '/pages/72044b/' },
             ],
           }
         ],
@@ -123,6 +125,12 @@ module.exports = {
               { text: 'tcp', link: '/pages/67bc6d/' },
               // { text: 'netty', link: '/cs/protocol/' },
               // { text: 'dubbo', link: '/cs/protocol/' },
+            ],
+          },
+          {
+            text: '通用',
+            items: [
+              { text: 'Git', link: '/pages/8292d8/' }
             ],
           },
           // {
