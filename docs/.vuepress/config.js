@@ -50,7 +50,7 @@ module.exports = {
             text: '学习笔记',
             items: [ //
               { text: 'Vue笔记', link: '/pages/114158caa9e96df0/' },
-              { text: 'SEO搜索引擎优化', link: '/pages/b1fd98/' },
+              { text: 'Vuepress', link: '/pages/b1fd98/' },
               { text: 'nginx', link: '/pages/72044b/' },
             ],
           }
