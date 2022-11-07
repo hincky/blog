@@ -2,18 +2,6 @@ const DOMAIN_NAME = 'hincky.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 module.exports = {
-  head: [
-    ['link', { rel: 'icon', href: '/img/h-icon.jpg' }],
-    [
-      'meta',
-      {
-        name: 'keywords',
-        content: 'hincky的个人技术博客,主要记录工作学习中的文档和经验，包括前后端开发以及运维,面试',
-      },
-    ],
-    // 下面这一行是对移动端优化
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
-  ],
   // base: '/blog/', //github发布的访问路径，本地开发的时候不要打开,只有在build时候再打开
   // theme: 'reco', //配置主题为reco
   // theme: '@vuepress/blog', //主题配置为博客类型
@@ -24,8 +12,9 @@ module.exports = {
       lang: 'zh-CN',
       title: 'hincky的博客',
       description: 'hincky的个人技术博客,用于记录后端技术相关的文档、笔记。不定期更新,随缘更新,有缘关注。',
-  }
+    }
   },
+
   themeConfig: {
     logo: '/img/earth-logo-removebg.png', //导航栏logo
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
@@ -238,6 +227,22 @@ module.exports = {
       }
     },
   },
+
+  head: [
+    ['link', { rel: 'icon', href: '/img/h-icon.jpg' }],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: 'hincky的个人技术博客,主要记录工作学习中的文档和经验，包括前后端开发以及运维,面试',
+      },
+    ],
+    // 下面这一行是对移动端优化
+    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
+    ['meta', { name: 'theme-color', content: '#11a8cd' }],
+    ['meta', { name: 'sogou_site_verification', content: '#F2nn8BCbkm' }],
+  ],
 
   plugins: [
     // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
