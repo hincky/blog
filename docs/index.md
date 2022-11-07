@@ -12,15 +12,15 @@ features:
 - title: 前端
   details: 前端相关的技术文档
   link: /web/ # 可选
-  imgUrl: /img/web.png # 可选
+  imgUrl: https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/web.png # 可选
 - title: 后端
   details: 后端技术开发涉及的技术文档，经验分享，总结
   link: /backend/ # 可选
-  imgUrl: /img/backend.png # 可选
+  imgUrl: https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/backend.png # 可选
 - title: 运维
   details: 运维相关的技术文档，总结等文章
   link: /operation/ # 可选
-  imgUrl: /img/operation.png # 可选
+  imgUrl: https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/operation.png # 可选
 
 ---
 

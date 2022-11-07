@@ -16,7 +16,7 @@ module.exports = {
   },
 
   themeConfig: {
-    logo: '/img/earth-logo-removebg.png', //导航栏logo
+    logo: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/earth-logo-removebg.png', //导航栏logo
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
@@ -229,7 +229,7 @@ module.exports = {
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/img/h-icon.jpg' }],
+    ['link', { rel: 'icon', href: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/h-icon.jpg' }],
     [
       'meta',
       {
@@ -242,7 +242,7 @@ module.exports = {
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }],
     ['meta', { name: 'sogou_site_verification', content: 'F2nn8BCbkm' }],
-    ['meta', { name: 'shenma-site-verification', content: 'b3108a17c782f92331652eb25ef73a14_1667800048' }],
+    ['meta', { name: 'shenma-site-verification', content: 'b3108a17c782f92331652eb25ef73a14_1667813825' }],
   ],
 
   plugins: [
