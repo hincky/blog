@@ -241,7 +241,7 @@ module.exports = {
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }],
-    ['meta', { name: 'sogou_site_verification', content: '#F2nn8BCbkm' }],
+    ['meta', { name: 'sogou_site_verification', content: 'F2nn8BCbkm' }],
   ],
 
   plugins: [
