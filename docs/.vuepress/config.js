@@ -243,7 +243,7 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#11a8cd' }],
     ['meta', { 'http-equiv': 'Content-Type',content: 'text/html;charset=gb2312' }],
     ['meta', { name: 'sogou_site_verification', content: 'F2nn8BCbkm' }],
-    ['meta', { name: 'shenma-site-verification', content: 'b3108a17c782f92331652eb25ef73a14_1667813825' }],
+    ['meta', { name: 'shenma-site-verification', content: 'b3108a17c782f92331652eb25ef73a14_1667866001' }],
   ],
 
   plugins: [
