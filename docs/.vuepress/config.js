@@ -61,7 +61,7 @@ module.exports = {
             text: '框架类',
             items: [ 
               { text: 'Spring', link: '/pages/f5b0a7/' },
-              { text: 'Spring Security', link: '/pages/00c080/' },
+              { text: 'Spring Security', link: '/pages/4ef8fa/' },
               { text: 'Mybatis', link: '/pages/77c768/' }
             ],
           },
