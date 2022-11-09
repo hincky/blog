@@ -20,7 +20,7 @@ module.exports = {
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
     displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
-    lastUpdated: 'Last Updated',
+    // lastUpdated: 'Last Updated',
     categoryText: '随笔', //碎片化文章默认分类值为 随笔
     docsDir: 'docs', // 编辑的文件夹
     editLinks: true, // 启用编辑
