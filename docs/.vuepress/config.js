@@ -102,7 +102,7 @@ module.exports = {
             text: '数据库',
             items: [
               { text: 'sql', link: '/pages/1f3cb0/' },
-              // { text: 'mysql', link: '/cs/database/mysql/' },
+              { text: 'mysql', link: '/pages/87b99e/' },
               // { text: 'redis', link: '/cs/database/redis' },
               // { text: 'mongoDB', link: '/cs/database/mongodb/' },
             ],
