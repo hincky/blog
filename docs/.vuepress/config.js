@@ -6,6 +6,7 @@ module.exports = {
   // theme: 'reco', //配置主题为reco
   // theme: '@vuepress/blog', //主题配置为博客类型
   theme: 'vdoing', //配置主题为vdoing
+  // theme: require.resolve('../../vdoing'), //使用本地主题包，后期可以个性化定制
 
   locales: {
     '/': {
@@ -18,7 +19,7 @@ module.exports = {
   themeConfig: {
     logo: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/earth-logo-removebg.png', //导航栏logo
     repo: 'hincky/vuepress', // 导航栏右侧生成Github链接
-    displayAllHeaders: true,  //侧边栏显示所有页面的标题链接
+    displayAllHeaders: true, //侧边栏显示所有页面的标题链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     // lastUpdated: 'Last Updated',
     categoryText: '随笔', //碎片化文章默认分类值为 随笔
@@ -29,98 +30,163 @@ module.exports = {
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
     sidebar: 'structuring', //  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义
-    nav: [
-      { text: '主页', link: '/', icon: 'reco-home' },//
+    nav: [{
+        text: '主页',
+        link: '/',
+        icon: 'reco-home'
+      }, //
       {
         text: '前端',
         link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [
-          {
-            text: '学习笔记',
-            items: [ //
-              { text: 'Vue笔记', link: '/pages/114158caa9e96df0/' },
-              { text: 'Vuepress', link: '/pages/b1fd98/' },
-              { text: 'nginx', link: '/pages/72044b/' },
-            ],
-          }
-        ],
+        items: [{
+          text: '学习笔记',
+          items: [ //
+            {
+              text: 'Vue笔记',
+              link: '/pages/114158caa9e96df0/'
+            },
+            {
+              text: 'Vuepress',
+              link: '/pages/b1fd98/'
+            },
+            {
+              text: 'nginx',
+              link: '/pages/72044b/'
+            },
+          ],
+        }],
       },
       {
         text: '后端',
-        link: '/backend/', 
-        items: [
-          { 
+        link: '/backend/',
+        items: [{
             text: '语言类',
-            items: [
-              { text: 'java', link: '/pages/bb6521/' },
-              { text: 'python', link: '/pages/32beb7/' },
-              { text: '设计模式', link: '/pages/89dab9/' }
+            items: [{
+                text: 'java',
+                link: '/pages/bb6521/'
+              },
+              {
+                text: 'python',
+                link: '/pages/32beb7/'
+              },
+              {
+                text: '设计模式',
+                link: '/pages/89dab9/'
+              }
             ]
-          },        
-          { 
+          },
+          {
             text: '框架类',
-            items: [ 
-              { text: 'Spring', link: '/pages/f5b0a7/' },
-              { text: 'Spring Security', link: '/pages/4ef8fa/' },
-              { text: 'Mybatis', link: '/pages/77c768/' }
+            items: [{
+                text: 'Spring',
+                link: '/pages/f5b0a7/'
+              },
+              {
+                text: 'Spring Security',
+                link: '/pages/4ef8fa/'
+              },
+              {
+                text: 'Mybatis',
+                link: '/pages/77c768/'
+              }
             ],
           },
         ],
       },
       {
         text: '运维',
-        link: '/operation/', 
-        items: [
-          { 
+        link: '/operation/',
+        items: [{
             text: '容器技术',
-            items: [ 
-              { text: 'docker', link: '/pages/77610c/' },
-              { text: 'k8s', link: '/pages/f53749/' },
-              { text: 'helm', link: '/pages/ad19df/' },
-              { text: 'prometheus', link: '/pages/c8a3c2/' },
-              { text: 'grafana', link: '/pages/59dbc6/' },
-              { text: 'jenkins', link: '/pages/b3ef60/' }
+            items: [{
+                text: 'docker',
+                link: '/pages/77610c/'
+              },
+              {
+                text: 'k8s',
+                link: '/pages/f53749/'
+              },
+              {
+                text: 'helm',
+                link: '/pages/ad19df/'
+              },
+              {
+                text: 'prometheus',
+                link: '/pages/c8a3c2/'
+              },
+              {
+                text: 'grafana',
+                link: '/pages/59dbc6/'
+              },
+              {
+                text: 'jenkins',
+                link: '/pages/b3ef60/'
+              }
             ],
           },
           {
             text: '命令集合',
-            items: [ 
-              { text: 'linux命令', link: 'https://wangchujiang.com/linux-command/' },
-              { text: 'docker命令', link: '/pages/0541ed/' },
-              { text: 'git命令', link: '/pages/339047/' },
-              { text: 'vim命令', link: '/pages/906419/' },
-              { text: 'k8s命令', link: '/pages/50f84a/' }
+            items: [{
+                text: 'linux命令',
+                link: 'https://wangchujiang.com/linux-command/'
+              },
+              {
+                text: 'docker命令',
+                link: '/pages/0541ed/'
+              },
+              {
+                text: 'git命令',
+                link: '/pages/339047/'
+              },
+              {
+                text: 'vim命令',
+                link: '/pages/906419/'
+              },
+              {
+                text: 'k8s命令',
+                link: '/pages/50f84a/'
+              }
             ],
           },
         ],
       },
       {
         text: '其他技术',
-        link: '/cs/', 
-        items: [
-          {
+        link: '/cs/',
+        items: [{
             text: '数据库',
-            items: [
-              { text: 'sql', link: '/pages/1f3cb0/' },
-              { text: 'mysql', link: '/pages/87b99e/' },
+            items: [{
+                text: 'sql',
+                link: '/pages/1f3cb0/'
+              },
+              {
+                text: 'mysql',
+                link: '/pages/87b99e/'
+              },
               // { text: 'redis', link: '/cs/database/redis' },
               // { text: 'mongoDB', link: '/cs/database/mongodb/' },
             ],
           },
           {
             text: '协议',
-            items: [
-              { text: 'http', link: '/pages/6c5dfb/' },
-              { text: 'tcp', link: '/pages/67bc6d/' },
+            items: [{
+                text: 'http',
+                link: '/pages/6c5dfb/'
+              },
+              {
+                text: 'tcp',
+                link: '/pages/67bc6d/'
+              },
               // { text: 'netty', link: '/cs/protocol/' },
               // { text: 'dubbo', link: '/cs/protocol/' },
             ],
           },
           {
             text: '通用',
-            items: [
-              { text: 'Git', link: '/pages/8292d8/' }
-            ],
+            items: [{
+              text: 'Git',
+              link: '/pages/8292d8/'
+            }],
           },
           // {
           //   text: '算法',
@@ -134,44 +200,73 @@ module.exports = {
           // },
           {
             text: '技术分享',
-            items: [
-              { text: 'git push/pull总是超时怎么办', link: '/pages/6b6220/' },
-              { text: 'idea debug技巧', link: '/pages/1afd08/' },
-              { text: 'postman使用', link: '/pages/5e185e/' },
-              { text: '问题总结', link: '/pages/6386cf/' },
-              { text: 'idea使用技巧', link: '/pages/29dd9b/' },
-              
+            items: [{
+                text: 'git push/pull总是超时怎么办',
+                link: '/pages/6b6220/'
+              },
+              {
+                text: 'idea debug技巧',
+                link: '/pages/1afd08/'
+              },
+              {
+                text: 'postman使用',
+                link: '/pages/5e185e/'
+              },
+              {
+                text: '问题总结',
+                link: '/pages/6386cf/'
+              },
+              {
+                text: 'idea使用技巧',
+                link: '/pages/29dd9b/'
+              },
+
             ]
           },
           {
             text: 'Oauth2',
-            items: [
-              { text: 'Oauth2原理', link: '/pages/f85137/' },
-            ]
+            items: [{
+              text: 'Oauth2原理',
+              link: '/pages/f85137/'
+            }, ]
           }
         ],
       },
       {
         text: '项目实战',
-        link: '/project/', 
-        items: [
-          { 
-            text: '项目列表',
-            items: [ 
-              { text: 'redis项目', link: '/pages/68617d/' },
-              { text: '微服务项目', link: '/pages/2888db/' }
-            ],
-          }
-        ],
+        link: '/project/',
+        items: [{
+          text: '项目列表',
+          items: [{
+              text: 'redis项目',
+              link: '/pages/68617d/'
+            },
+            {
+              text: '微服务项目',
+              link: '/pages/2888db/'
+            }
+          ],
+        }],
       },
       {
         text: '索引',
         link: '/archives/',
-        items: [
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
-          { text: '归档', link: '/archives/' },
-          { text: '随笔', link: '/_posts/' },
+        items: [{
+            text: '分类',
+            link: '/categories/'
+          },
+          {
+            text: '标签',
+            link: '/tags/'
+          },
+          {
+            text: '归档',
+            link: '/archives/'
+          },
+          {
+            text: '随笔',
+            link: '/_posts/'
+          },
         ],
       },
     ],
@@ -193,8 +288,7 @@ module.exports = {
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
     social: {
       // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
-      icons: [
-        {
+      icons: [{
           iconClass: 'icon-youjian',
           title: '发邮件',
           link: 'mailto:hincky@yeah.net',
@@ -217,7 +311,7 @@ module.exports = {
       createYear: 2022, // 博客创建年份
       copyrightInfo:
         // 博客版权信息、备案信息等，支持a标签或换行标签</br>
-        'Hincky | <a href="https://github.com/hincky/vuepress/blob/master/LICENSE" target="_blank">MIT License</a> | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2022120427号</a>', 
+        'Hincky | <a href="https://github.com/hincky/vuepress/blob/master/LICENSE" target="_blank">MIT License</a> | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2022120427号</a>',
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -230,7 +324,10 @@ module.exports = {
   },
 
   head: [
-    ['link', { rel: 'icon', href: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/h-icon.jpg' }],
+    ['link', {
+      rel: 'icon',
+      href: 'https://hincky-blog.oss-cn-guangzhou.aliyuncs.com/img/h-icon.jpg'
+    }],
     [
       'meta',
       {
@@ -239,12 +336,30 @@ module.exports = {
       },
     ],
     // 下面这一行是对移动端优化
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
-    ['meta', { name: 'theme-color', content: '#11a8cd' }],
-    ['meta', { 'http-equiv': 'Content-Type',content: 'text/html;charset=gb2312' }],
-    ['meta', { name: 'sogou_site_verification', content: 'DQNEnBIytX' }],
-    ['meta', { name: 'shenma-site-verification', content: 'b3108a17c782f92331652eb25ef73a14_1667866471' }],
+    ['meta', {
+      name: 'viewport',
+      content: 'width=device-width,initial-scale=1,user-scalable=no'
+    }],
+    ['meta', {
+      name: 'baidu-site-verification',
+      content: '7F55weZDDc'
+    }], // 百度统计的站长验证（你可以去掉）
+    ['meta', {
+      name: 'theme-color',
+      content: '#11a8cd'
+    }],
+    ['meta', {
+      'http-equiv': 'Content-Type',
+      content: 'text/html;charset=gb2312'
+    }],
+    ['meta', {
+      name: 'sogou_site_verification',
+      content: 'DQNEnBIytX'
+    }],
+    ['meta', {
+      name: 'shenma-site-verification',
+      content: 'b3108a17c782f92331652eb25ef73a14_1667866471'
+    }],
   ],
 
   plugins: [
@@ -252,8 +367,7 @@ module.exports = {
     [
       'thirdparty-search',
       {
-        thirdparty: [
-          {
+        thirdparty: [{
             title: '在MDN中搜索',
             frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
             behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
@@ -308,8 +422,7 @@ module.exports = {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
     toc: {
-        includeLevel:[1, 2, 3, 4]
+      includeLevel: [1, 2, 3, 4]
     }
   },
 }
-
