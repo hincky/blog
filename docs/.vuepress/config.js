@@ -66,6 +66,10 @@ module.exports = {
                 link: '/pages/bb6521/'
               },
               {
+                text: 'go',
+                link: '/pages/2b796e/'
+              },
+              {
                 text: 'python',
                 link: '/pages/32beb7/'
               },
