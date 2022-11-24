@@ -368,6 +368,7 @@ module.exports = {
 
   plugins: [
     // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
+    "vuepress-plugin-reading-progress", //阅读进度条插件
     [
       'thirdparty-search',
       {
