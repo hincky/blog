@@ -11,7 +11,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'hincky的博客',
+      title: 'hincky的主页',
       description: 'hincky的个人技术博客,用于记录后端技术相关的文档、笔记。不定期更新,随缘更新,有缘关注。',
     }
   },
@@ -30,11 +30,12 @@ module.exports = {
     subSidebar: 'auto', //在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
     sidebar: 'structuring', //  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | 自定义
-    nav: [{
-        text: '主页',
-        link: '/',
-        icon: 'reco-home'
-      }, //
+    nav: [
+      // {
+      //   text: '主页',
+      //   link: '/',
+      //   icon: 'reco-home'
+      // }, //
       {
         text: '前端',
         link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
