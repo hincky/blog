@@ -175,6 +175,10 @@ module.exports = {
           {
             text: '协议',
             items: [{
+                text: '网络模型',
+                link: '/pages/0f72af/'
+              },
+              {
                 text: 'http/1.1',
                 link: '/pages/6c5dfb/'
               },
