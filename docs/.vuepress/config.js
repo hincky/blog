@@ -133,7 +133,7 @@ module.exports = {
             text: '命令集合',
             items: [{
                 text: 'linux命令',
-                link: 'https://wangchujiang.com/linux-command/'
+                link: '/pages/7dcd11/'
               },
               {
                 text: 'docker命令',
